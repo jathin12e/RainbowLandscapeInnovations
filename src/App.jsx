@@ -16,7 +16,7 @@ import Fountain from './components/fountain'
 import Bioponds from './components/bioponds'
 import Newinnovation from './components/newInnovation'
 
-import Scrolltop from './scrolltop'
+
 
 const App = () => {
   return (

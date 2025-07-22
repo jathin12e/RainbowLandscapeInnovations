@@ -42,7 +42,7 @@ const Footer = () => {
             
           </ul>
         </div>
-        <div>
+        <div style={{marginTop:"20px"}}>
           <h4>Get In Touch</h4>
           <p><Link to='/contact' style={{color:"black"}}>Question or Feedback?</Link></p>
           <p>We'd love to hear from you</p>

@@ -161,10 +161,10 @@ const Home = () => {
         <h3 style={{ marginLeft: "30px" , fontFamily:"sans-serif"}}>We Offer Best Services </h3>
         <div className='horizontal-scroll-container'>
           {services.map((u) => (
-            <a href={`${u.url}`} style={{textDecoration:"none"}}><div className='service-card' key={u.id}>
+            <Link to={`${u.url}`} style={{textDecoration:"none"}}><div className='service-card' key={u.id}>
               <img src={u.src} alt='service' className='service-image' />
               <h2 className='service-title'>{u.name}</h2>
-            </div></a>
+            </div></Link>
           ))}
           <Link to='/Services' className='btn btn-primary btn-inline-primary' style={{marginTop:"70px" , height:"50px" , width:"200px"}} >Know More</Link>
         </div>

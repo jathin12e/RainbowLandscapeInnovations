@@ -1,5 +1,6 @@
 import React from 'react';
 import './footer.css'; // External CSS
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
@@ -22,26 +23,26 @@ const Footer = () => {
           <h4>Quick Links</h4>
           <ul>
             
-            <li><a href="/about">About Us</a></li>
-            <li><a href="/newinnovation">New Innovations</a></li>
-            <li><a href="/services">Services</a></li>
-            <li><a href="/careers">Careers</a></li>
-            <li><a href="/contact">Contact</a></li>
-            <li><a href="/enquiry">Enquiry</a></li>
+            <li><Link to="/about">About Us</Link></li>
+            <li><Link to="/newinnovation">New Innovations</Link></li>
+            <li><Link to="/services">Services</Link></li>
+            <li><Link to="/careers">Careers</Link></li>
+            <li><Link to="/contact">Contact</Link></li>
+            <li><Link to="/enquiry">Enquiry</Link></li>
           </ul>
         </div>
         <div className="footer-section">
           <h4>Services</h4>
           <ul>
-            <li><a href="/design">Design and Consultancy</a></li>
-            <li><a href="/pool">Swimming pool</a></li>
-            <li><a href="/landscape">Landscape Irrigation</a></li>
-            <li><a href="/fountain">Fountain Technologies</a></li>
-            <li><a href="/bioponds">Bio ponds</a></li>
+            <li><Link to="/pool">Swimming pool</Link></li>
+            <li><Link to="/design">Design and Consultancy</Link></li>
+            <li><Link to="/landscape">Landscape Irrigation</Link></li>
+            <li><Link to="/fountain">Fountain Technologies</Link></li>
+            <li><Link to="/bioponds">Bio ponds</Link></li>
             
           </ul>
         </div>
-        <div >
+        <div>
           <h4>Get In Touch</h4>
           <p><a href='/contact' style={{color:"black"}}>Question or Feedback?</a></p>
           <p>We'd love to hear from you</p>

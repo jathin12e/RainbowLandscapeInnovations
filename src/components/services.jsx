@@ -70,7 +70,7 @@ const ProductsPage = () => {
                 <div className="product-content">
                   <h2>{product.name}</h2>
                   <p>{product.description}</p>
-                  <a href={`${product.path}`} style={{color:"white"}}><button className='button'>Know more</button></a>
+                  <Link to={`${product.path}`} style={{color:"white"}}><button className='button'>Know more</button></Link>
                    {productButtons.length > 0 && (
                     <div className="button-group">
                       {productButtons}

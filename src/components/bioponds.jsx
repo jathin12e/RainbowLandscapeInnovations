@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './pool.css';
 import Nav from './nav';
 import Footer from './footer';
+import { Link } from 'react-router-dom';
 
 const images = [
   '/Screenshot 2025-07-21 010146.png',
@@ -116,7 +117,7 @@ const CarouselPage = () => {
   <div className='position'>
     <h3 style={{fontFamily:"serif" , fontSize:"2rem" , color:"gray"}}>We are ready to</h3>
     <h1 style={{fontSize:"5rem" ,fontFamily:"serif"}}>SERVE YOU</h1>
-    <a href='/contact' ><button className='btn1'>Contact Us</button></a>
+    <Link to='/contact' ><button className='btn1'>Contact Us</button></Link>
   </div>
 
 

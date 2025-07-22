@@ -445,33 +445,68 @@
 
 .service-card {
   flex: 0 0 auto;
-  width: 280px;
-  background-color: #fff;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-  scroll-snap-align: start;
-  text-align: center;
+  width: 250px;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  overflow-x: scroll ;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
+  text-align: center;
 }
 
 .service-card:hover {
   transform: translateY(-6px);
-  
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
 }
 
 .service-image {
   width: 100%;
   height: 180px;
   object-fit: cover;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
 }
 
 .service-title {
+  font-size: 20px;
   margin: 16px 0;
-  font-size: 18px;
   color: #333;
   font-weight: 600;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+.service-card {
+  
+  
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  text-align: center;
+  
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.service-image {
+ 
+  height: 280px;
+  object-fit: cover;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+}
+
+.service-title {
+  font-size: 20px;
+  margin: 16px 0;
+  color: #333;
+  font-weight: 600;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 

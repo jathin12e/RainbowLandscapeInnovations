@@ -156,19 +156,27 @@ const Home = () => {
       <img src="/images/WhatsApp Image 2023-12-06 at 11.20.58(1).jpeg" alt="image" width={400}  style={{borderRadius:"20px"}}/>
     </div>
 
-      <div className='bg-image-1'>
-        
-        <h3 style={{ marginLeft: "30px" , fontFamily:"sans-serif"}}>We Offer Best Services </h3>
-        <div className='horizontal-scroll-container'>
-          {services.map((u) => (
-            <Link to={`${u.url}`} style={{textDecoration:"none"}}><div className='service-card' key={u.id}>
-              <img src={u.src} alt='service' className='service-image' />
-              <h2 className='service-title'>{u.name}</h2>
-            </div></Link>
-          ))}
-          <Link to='/Services' className='btn btn-primary btn-inline-primary' style={{marginTop:"70px" , height:"50px" , width:"200px"}} >Know More</Link>
+      <div className="bg-image-1">
+  <h3 style={{ marginLeft: "30px", fontFamily: "sans-serif", fontSize: "28px" }}>
+    We Offer Best Services
+  </h3>
+
+  <div className="horizontal-scroll-container">
+    {services.map((u) => (
+      <Link to={`${u.url}`} key={u.id} style={{ textDecoration: "none" }}>
+        <div className="service-card">
+          <img src={u.src} alt="service" className="service-image" />
+          <h2 className="service-title">{u.name}</h2>
         </div>
-      </div>
+      </Link>
+    ))}
+
+    <Link to="/Services" className="know-more-card">
+      <span>Know More</span>
+    </Link>
+  </div>
+</div>
+
 
 
     <div style={{margin:"2rem"}}>

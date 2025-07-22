@@ -44,9 +44,9 @@ const Footer = () => {
         </div>
         <div>
           <h4>Get In Touch</h4>
-          <p><a href='/contact' style={{color:"black"}}>Question or Feedback?</a></p>
+          <p><Link to='/contact' style={{color:"black"}}>Question or Feedback?</Link></p>
           <p>We'd love to hear from you</p>
-          <a href='/'><button className='btn  btn-outline-primary' style={{color:"black" , borderInlineColor:"black"}}>Back to home</button></a>
+          <Link to='/'><button className='btn  btn-outline-primary' style={{color:"black" , borderInlineColor:"black"}}>Back to home</button></Link>
         </div>
     
         

@@ -2,27 +2,26 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  
   gap: 50px;
   background-image: url('/images/rm222-mind-26.jpg');
   background-size: cover;
   flex-wrap: wrap;
+  padding: 20px;
 }
 
+/* Left Image */
 .left-image img {
   max-width: 500px;
   width: 100%;
   border-radius: 15px;
-  
 }
 
+/* Right Form */
 .right-form {
   max-width: 500px;
   width: 100%;
-  
   padding: 30px;
   border-radius: 15px;
- 
 }
 
 .right-form h1 {
@@ -61,8 +60,65 @@
   border-radius: 8px;
   font-size: 16px;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .form button:hover {
   background-color: #0056b3;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+  .enquiry-container {
+    gap: 30px;
+    padding: 20px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .enquiry-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .left-image img {
+    max-width: 80%;
+  }
+
+  .right-form {
+    padding: 20px;
+  }
+
+  .right-form h1 {
+    font-size: 24px;
+  }
+
+  .right-form p {
+    font-size: 13px;
+  }
+
+  .form input,
+  .form textarea {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .left-image img {
+    max-width: 100%;
+  }
+
+  .right-form {
+    padding: 15px;
+  }
+
+  .right-form h1 {
+    font-size: 20px;
+  }
+
+  .form button {
+    font-size: 14px;
+    padding: 10px 16px;
+  }
 }

@@ -26,7 +26,7 @@ const CarouselPage = () => {
       <div className='navbar-overlay'>
         <Nav />
       </div>
-
+      <div style={{ height: '80px' }}></div>  
       {/* Carousel Section */}
       <div className="carousel-container">
         <img

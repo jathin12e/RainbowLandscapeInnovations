@@ -61,3 +61,94 @@
   font-size: 14px;
   color: #ccc;
 }
+/* Tablets (≤ 992px) */
+@media screen and (max-width: 992px) {
+  .team-cards-wrapper {
+    gap: 20px;
+    margin: 30px;
+  }
+
+  .team-card {
+    width: 240px;
+    height: 330px;
+  }
+
+  .team-info-overlay h3 {
+    font-size: 18px;
+  }
+
+  .team-info-overlay p {
+    font-size: 13px;
+  }
+}
+
+/* Small Tablets / Large Phones (≤ 768px) */
+@media screen and (max-width: 768px) {
+  .team-cards-wrapper {
+    gap: 15px;
+    margin: 20px;
+  }
+
+  .team-card {
+    width: 200px;
+    height: 300px;
+  }
+
+  .team-info-overlay h3 {
+    font-size: 16px;
+  }
+
+  .team-info-overlay p {
+    font-size: 12px;
+  }
+}
+
+/* Phones (≤ 480px) */
+@media screen and (max-width: 480px) {
+  .team-simple-section {
+    padding: 40px 10px;
+  }
+
+  .team-title {
+    font-size: 24px;
+  }
+
+  .team-cards-wrapper {
+    gap: 10px;
+    margin: 10px;
+    justify-content: center;
+  }
+
+  .team-card {
+    width: 150px;
+    height: 230px;
+  }
+
+  .team-info-overlay {
+    padding: 12px;
+  }
+
+  .team-info-overlay h3 {
+    font-size: 14px;
+  }
+
+  .team-info-overlay p {
+    font-size: 11px;
+  }
+}
+
+/* Extra Small Phones (≤ 360px) */
+@media screen and (max-width: 360px) {
+  .team-card {
+    width: 130px;
+    height: 200px;
+  }
+
+  .team-info-overlay h3 {
+    font-size: 13px;
+  }
+
+  .team-info-overlay p {
+    font-size: 10px;
+  }
+}

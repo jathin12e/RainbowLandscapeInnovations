@@ -58,7 +58,7 @@ const about = () => {
         <div style={{marginTop:"50px"}}>
           <h1 style={{fontFamily:'san-serif'}}>OUR CORE VALUES</h1>
           <p style={{color:"grey"}}>Our values shape the culture of our organization and define the character of company</p>
-          <img src='/images/Untitled Diagram.drawio (2)-Photoroom.png' height={500} width={900} style={{borderRadius:"30px"}}/>
+          <img src='/images/Untitled Diagram.drawio (2)-Photoroom.png'  className='img-1'/>
         </div>
         <div className='locate-position'>
           <h1 style={{fontFamily:'san-serif'}}>Office Locations</h1>

@@ -1,0 +1,12 @@
+.feed-position{
+    display: flex;
+    justify-content: space-around;
+}
+
+@media (max-width:768px){
+    .feed-position{
+    
+    flex-direction: column-reverse;
+    justify-content: space-around;
+}
+}

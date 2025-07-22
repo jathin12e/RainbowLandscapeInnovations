@@ -51,3 +51,13 @@
   margin-top: 10px;
   color: #080808;
 }
+
+@media (max-width:728px) {
+  .track-grid {
+  flex-direction: column;
+  
+  gap: 30px;
+  justify-items: center;
+  
+}
+}

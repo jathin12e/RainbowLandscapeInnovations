@@ -109,9 +109,12 @@ body {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-  .product-row,
-  .product-row.reverse {
-    flex-direction: column;
+  .product-row
+   {
+    flex-direction: column-reverse;
+  }
+  .product-row.reverse{
+    flex-direction: column-reverse;
   }
 
   .product-content,

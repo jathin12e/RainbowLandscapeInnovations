@@ -1,37 +1,27 @@
 .enquiry-container {
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   gap: 50px;
   background-image: url('/images/rm222-mind-26.jpg');
   background-size: cover;
-  background-position: center;
-  flex-wrap: wrap;
-  padding: 40px 20px;
+  
+  padding: 20px;
 }
 
-/* Image Container */
-.left-image {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-}
-
+/* Left Image */
 .left-image img {
-  width: 100%;
-  max-width: 500px;
+  width: 500px;
+  
   border-radius: 15px;
 }
 
-/* Form Container */
+/* Right Form */
 .right-form {
-  flex: 1;
   max-width: 500px;
   width: 100%;
   padding: 30px;
   border-radius: 15px;
-  background: rgba(255, 255, 255, 0.95);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .right-form h1 {
@@ -54,6 +44,7 @@
   border: 1px solid #ccc;
   border-radius: 8px;
   font-size: 16px;
+  box-sizing: border-box;
 }
 
 .form textarea {
@@ -75,37 +66,24 @@
 .form button:hover {
   background-color: #0056b3;
 }
+ 
 
-/* 🔥 THIS IS WHAT STACKS IT ON PHONES */
-@media screen and (max-width: 768px) {
+@media (max-width:768px) {
   .enquiry-container {
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    gap: 30px;
-  }
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+  background-image: url('/images/rm222-mind-26.jpg');
+  background-size: cover;
+  
+  padding: 20px;
+}
 
-  .left-image,
-  .right-form {
-    width: 100%;
-    max-width: 90%; /* Slightly reduce to add padding on sides */
-  }
+/* Left Image */
+.left-image img {
+  border-radius: 15px;
+}
 
-  .right-form {
-    padding: 20px;
-  }
-
-  .right-form h1 {
-    font-size: 24px;
-    text-align: center;
-  }
-
-  .right-form p {
-    font-size: 13px;
-    text-align: center;
-  }
-
-  .form button {
-    width: 100%;
-  }
 }

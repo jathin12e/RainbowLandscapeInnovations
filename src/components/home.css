@@ -387,36 +387,35 @@
   background-color: rgb(255, 153, 0);
 }
 
-.bg-image-1{
+.bg-image-1 {
   background-image: url('/images/DeWatermark.ai_1745581012091.png');
   background-size: cover;
+  background-position: center;
   height: 70vh;
   padding-top: 20px;
-  align-items: center;
-}
-
-.service-position{
   display: flex;
-  align-items: center;
-  overflow-x: auto;
-  margin-top: 40px;
-  width: 200%;
-  gap: 20px;
-  margin-left: 10px;
+  flex-direction: column;
 }
 
-.service-position::-webkit-scrollbar{
+.service-position {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  gap: 20px;
+  padding: 20px 10px;
+  white-space: nowrap;
+}
+
+.service-position::-webkit-scrollbar {
   display: none;
 }
 
-/*services */
-
-
-
-
-
 .service-card {
-  
+  flex: 0 0 auto; /* Prevent card from shrinking */
+width: 500px;
   background-color: #fff;
   border-radius: 12px;
   overflow: hidden;
@@ -425,16 +424,15 @@
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
+  margin-left: 20px;
 }
 
 .service-card:hover {
   transform: translateY(-6px);
-  
 }
 
 .service-image {
-  
-  height: 180px;
+  height: 200px;
   object-fit: cover;
 }
 
@@ -444,5 +442,3 @@
   color: #333;
   font-weight: 600;
 }
-
-

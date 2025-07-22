@@ -5,6 +5,12 @@
   top: 0;
   
 }
+.img-1{
+height:500px;
+width:900px;
+margin-top: 20px;
+}
+
 .bg-image2{
     background-image:url('/images/group-diverse-business-people.jpg');
     color: white;
@@ -76,7 +82,7 @@
   }
 }
 
-@media screen and (max-width: 768px) {
+@media (max-width: 768px) {
   .bg-image2 {
     height: 35vh;
     font-size: 16px;
@@ -115,7 +121,11 @@
   .bg-image3 {
     padding: 10px;
   }
+   .img-1{
+height:100%;
+width:50%;
 
+}
   .text-position {
     font-size: 14px;
     padding: 8px;

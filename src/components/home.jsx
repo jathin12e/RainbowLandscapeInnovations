@@ -153,7 +153,7 @@ const Home = () => {
               </div>
             </Link>
           ))}
-          <Link to='/Services' className='btn btn-primary btn-inline-primary' style={{ marginTop: "70px", height: "50px", width: "200px" }}>
+          <Link to='/Services' className='btn btn-primary btn-inline-primary' style={{ marginTop: "70px", height: "50px", width: "200px" , textAlign:"center" }}>
             Know More
           </Link>
         </div>

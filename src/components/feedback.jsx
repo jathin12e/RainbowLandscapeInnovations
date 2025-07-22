@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import './enquiry.css'; // your styles
+import './feedback.css'; // your styles
 
 export default function Feedback() {
   const [buttonText, setButtonText] = useState("Submit");
@@ -33,7 +33,7 @@ const handleSubmit = (e) => {
 
   return (
     <div>
-      <div style={{display:"flex" , justifyContent:"space-around"}}>
+      <div className="feed-position">
         
 
         <div className="right-form" style={{marginTop:"20px"}}>

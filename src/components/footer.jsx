@@ -21,7 +21,7 @@ const Footer = () => {
         {/* Column 2: Navigation */}
         <div className="footer-section">
           <h4>Quick Links</h4>
-          <ul>
+          <ul className='position-2'>
             
             <li><Link to="/about">About Us</Link></li>
             <li><Link to="/newinnovation">New Innovations</Link></li>
@@ -33,7 +33,7 @@ const Footer = () => {
         </div>
         <div className="footer-section">
           <h4>Services</h4>
-          <ul>
+          <ul className='position-2'>
             <li><div className='scroll-target'><Link to="/pool">Swimming pool</Link></div></li>
             <li><Link to="/design">Design and Consultancy</Link></li>
             <li><Link to="/landscape">Landscape Irrigation</Link></li>

@@ -57,7 +57,7 @@ const CarouselPage = () => {
             </p>
             <div className="about-extra-images">
               <img src="/images/Bio-Ponds-1.jpg" alt="Extra 1" />
-              <img src="/public/Screenshot 2025-07-21 003347.png" alt="Extra 2" />
+              <img src="/Screenshot 2025-07-21 003347.png" alt="Extra 2" />
             </div>
           </div>
         </div>

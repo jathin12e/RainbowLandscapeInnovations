@@ -144,7 +144,7 @@ const Home = () => {
 
       <div className='bg-image-1'>
         <h3 style={{ marginLeft: "30px", fontFamily: "sans-serif" }}>We Offer Best Services </h3>
-        <div className='horizontal-scroll-container'>
+        <div className='service-position'>
           {services.map((u) => (
             <Link to={u.url} key={u.id} style={{ textDecoration: "none" }}>
               <div className='service-card'>

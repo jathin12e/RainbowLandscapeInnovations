@@ -42,7 +42,7 @@ const CarouselPage = () => {
       </div>
 
       {/* About Section */}
-      <section className="about-section">
+      <div className="about-section">
         <h5 style={{color:"blue"}}>-- We Build The Best Pools</h5>
         <h1 style={{fontFamily:"serif" , fontSize:"4rem"}}>We Are Swimming Pool  <br /> Builders and Swimming <br />Pool Service Experts</h1>
         <div className="about-container">
@@ -60,9 +60,9 @@ const CarouselPage = () => {
             </div>
           </div>
         </div>
-      </section>
+      </div>
       {/* Our Services Section */}
-<section className="services-section">
+<div className="services-section">
   <h2 className="section-title">Our Services</h2>
   <div className="services-container">
     <div className="service-card">
@@ -83,7 +83,7 @@ const CarouselPage = () => {
       <p>Reliable routine and emergency pool maintenance services.</p>
     </div>
   </div>
-</section>
+</div>
 <div style={{margin:"2rem"}}>
   <video width="100%" autoPlay muted controls loop style={{borderRadius:"20px"}}>
     <source src="https://res.cloudinary.com/dfzliqupz/video/upload/v1753162637/Astral_Pool_-_lights_bpevvj.mp4" type="video/mp4" />
@@ -91,7 +91,7 @@ const CarouselPage = () => {
   </video>
 </div>
 {/* Pool Models Section */}
-  <section className="models-section">
+  <div className="models-section">
     <h2 className="section-title">Pool Models</h2>
     <div className="models-container">
       <div className="model-card">
@@ -111,7 +111,7 @@ const CarouselPage = () => {
         <h3>Kidney</h3>
       </div>*/}
     </div>
-  </section>
+  </div>
   <div className='position'>
     <h3 style={{fontFamily:"serif" , fontSize:"2rem" , color:"gray"}}>We are ready to</h3>
     <h1 style={{fontSize:"5rem" ,fontFamily:"serif"}}>SERVE YOU</h1>

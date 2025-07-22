@@ -1,4 +1,5 @@
 import React from 'react'
+import './App.css'
 import Home from './components/home'
 import Nav from './components/nav'
 import About from './components/about'
@@ -14,6 +15,8 @@ import Landscape from './components/Landscape'
 import Fountain from './components/fountain'
 import Bioponds from './components/bioponds'
 import Newinnovation from './components/newInnovation'
+
+import Scrolltop from './scrolltop'
 
 const App = () => {
   return (

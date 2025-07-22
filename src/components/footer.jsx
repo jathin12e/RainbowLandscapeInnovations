@@ -34,7 +34,7 @@ const Footer = () => {
         <div className="footer-section">
           <h4>Services</h4>
           <ul>
-            <li><Link to="/pool">Swimming pool</Link></li>
+            <li><div className='scroll-target'><a href="/pool">Swimming pool</a></div></li>
             <li><Link to="/design">Design and Consultancy</Link></li>
             <li><Link to="/landscape">Landscape Irrigation</Link></li>
             <li><Link to="/fountain">Fountain Technologies</Link></li>

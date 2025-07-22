@@ -50,7 +50,7 @@ const products = [
 
 const ProductShowcase = () => {
   return (
-    <section className="product-section">
+    <div className="product-section">
       <div className='navbar-overlay'>
          <Nav />
       </div>
@@ -80,12 +80,9 @@ const ProductShowcase = () => {
     
 
       <Footer />
-      <video width="640" height="480" autoPlay loop muted controls>
-        <source src="https://drive.google.com/uc?export=download&id=17kFXGYQZq1kVQChJImjZgLSQONme0zkA" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
+     
 
-    </section>
+    </div>
   );
 };
 

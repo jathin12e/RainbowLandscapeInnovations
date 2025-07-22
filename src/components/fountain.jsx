@@ -22,7 +22,7 @@ const CarouselPage = () => {
   }, []);
 
   return (
-    <div className="carousel-page">
+    <div className="carousel-page" >
       <div className='navbar-overlay'>
         <Nav />
       </div>
@@ -42,7 +42,7 @@ const CarouselPage = () => {
       </div>
 
       {/* About Section */}
-      <section className="about-section">
+      <div className="about-section">
         <h5 style={{color:"blue"}}></h5>
         <h1 style={{fontFamily:"serif" , fontSize:"4rem"}}>Complete Fountain Systems <br />with Global Standards</h1>
         <div className="about-container">
@@ -61,9 +61,9 @@ const CarouselPage = () => {
             </div>
           </div>
         </div>
-      </section>
+      </div>
       {/* Our Services Section */}
-<section className="services-section">
+<div className="services-section">
   <h2 className="section-title">Our Services</h2>
   <div className="services-container">
     <div className="service-card">
@@ -84,7 +84,7 @@ const CarouselPage = () => {
       <p>Reliable routine and emergency pool maintenance services.</p>
     </div>
   </div>
-</section>
+</div>
 <div style={{margin:"2rem"}}>
   <video width="100%" autoPlay muted controls loop style={{borderRadius:"20px"}}>
     <source src="https://res.cloudinary.com/dfzliqupz/video/upload/v1753162480/Dry_Deck_Fountain_rajazt.mp4" type="video/mp4" />

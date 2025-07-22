@@ -16,7 +16,7 @@ const CareersPage = () => {
         </div>
       </header>
 
-      <section className="job-section">
+      <div className="job-section">
         <h2>We're Not Hiring Right Now</h2>
         <p className="no-openings">
           There are currently no job openings. However, we’re always open to
@@ -24,7 +24,7 @@ const CareersPage = () => {
           <br />
           <strong>ram@rliindia.com</strong>
         </p>
-      </section>
+      </div>
 
       <Footer />
     </div>

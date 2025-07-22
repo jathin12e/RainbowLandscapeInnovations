@@ -4,6 +4,7 @@ import Nav from './nav';
 import Footer from './footer';
 import { Link } from 'react-router-dom';
 
+
 const products = [
   {
     id: 1,

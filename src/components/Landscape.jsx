@@ -69,7 +69,7 @@ const CarouselPage = () => {
       </div>
 
       {/* About Section */}
-      <section className="about-section">
+      <div className="about-section">
         <h1 style={{fontFamily:"serif" , fontSize:"4rem"}}> We Will Plan And Desgin <br /> Landscape Irrigation <br /></h1>
         <div className="about-container">
           <div className="about-image">
@@ -86,7 +86,7 @@ const CarouselPage = () => {
             </div>
           </div>
         </div>
-      </section>
+      </div>
       {/* Our Services Section */}
 
 {/*<video width="100%" autoPlay muted controls loop>
@@ -94,7 +94,7 @@ const CarouselPage = () => {
     Your browser does not support the video tag.
 </video>
  Pool Models Section */}
-  <section style={styles.section}>
+  <div style={styles.section}>
       <div style={styles.container}>
         <h2 style={styles.heading}>Landscape Irrigation Design & Planning</h2>
         <p style={styles.description}>
@@ -111,7 +111,7 @@ const CarouselPage = () => {
           ))}
         </div>
       </div>
-    </section>
+    </div>
   <div className='position'>
     <h3 style={{fontFamily:"serif" , fontSize:"2rem" , color:"gray"}}>We are ready to</h3>
     <h1 style={{fontSize:"5rem" ,fontFamily:"serif"}}>SERVE YOU</h1>

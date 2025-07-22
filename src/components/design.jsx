@@ -42,7 +42,7 @@ const CarouselPage = () => {
       </div>
 
       {/* About Section */}
-      <section className="about-section">
+      <div className="about-section">
         <h1 style={{ fontFamily: "serif", fontSize: "4rem" }}>
           Efficient Design & <br/>Expert Execution 
         </h1>
@@ -67,10 +67,10 @@ We recommend and incorporate state-of-the-art products sourced from around the w
           </div>
           <img src='/Screenshot 2025-07-21 010559.png' width={500}  style={{marginLeft:"4rem" , borderRadius:'20px'}}/>
         </div>
-      </section>
+      </div>
 
       {/* Our Services Section */}
-      <section className="services-section">
+      <div className="services-section">
         <h2 className="section-title">Our Services</h2>
         <div className="services-container">
           <div className="service-card">
@@ -99,7 +99,7 @@ We recommend and incorporate state-of-the-art products sourced from around the w
             <p></p>
           </div>
         </div>
-      </section>
+      </div>
 
      
       

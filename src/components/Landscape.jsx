@@ -73,7 +73,7 @@ const CarouselPage = () => {
         <h1 style={{fontFamily:"serif" , fontSize:"4rem"}}> We Will Plan And Desgin <br /> Landscape Irrigation <br /></h1>
         <div className="about-container">
           <div className="about-image">
-            <img src="/public/image.png" alt="About Us" />
+            <img src="/image.png" alt="About Us" />
           </div>
           <div className="about-content">
             

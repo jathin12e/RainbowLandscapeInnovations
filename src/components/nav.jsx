@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom'
 
 const nav = () => {
   return (
-    <div className='nav-position fixed'>
+    <div className='nav-position'>
         <Link to='/'><img src='/images\Screenshot_2025-07-14_155808-removebg-preview.png' alt='logo' width={130}/></Link>
         <ul className='nav-links'>
             <Link to="/" style={{color:"black" , textDecoration:"none"}}><li className='hovering'>Home</li></Link>

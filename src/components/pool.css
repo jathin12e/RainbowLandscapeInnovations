@@ -1,0 +1,167 @@
+.carousel-container {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+   
+}
+
+.carousel-image {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, rgba(71, 69, 69, 0.7), rgba(11, 11, 11, 0.2));
+  object-fit: cover;
+  
+}
+.dark-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4); /* Adjust the alpha for more/less darkness */
+  z-index: 1;
+}
+.carousel-text-overlay {
+  position: absolute;
+  top: 30%;
+  left: 30%;
+  z-index: 2;
+  color: white;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+ 
+}
+
+.carousel-text-overlay h1 {
+  font-size: 5rem;
+  margin: 0;
+  font-family: serif;
+  
+}
+
+
+
+.about-section {
+  padding: 50px 20px;
+  background-image: url('images/3433814.jpg');
+  background-size: cover;
+  padding: 5rem;
+}
+
+.about-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 30px;
+  margin-top: 3rem;
+}
+
+.about-image img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 10px;
+}
+
+.about-content {
+  flex: 1;
+}
+
+.about-content h2 {
+  margin-top: 0;
+  font-size: 2rem;
+}
+
+.about-content p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.about-extra-images {
+  display: flex;
+  gap: 15px;
+}
+
+.about-extra-images img {
+  width: 250px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-top: 30px;
+}
+
+.section-title {
+  text-align: center;
+  margin: 60px 0 30px;
+  font-size: 2.5rem;
+  color: #023e8a;
+}
+
+/* Services Section */
+.services-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 0 2rem;
+}
+
+.service-card {
+  width: 250px;
+  text-align: center;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.service-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Models Section */
+.models-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 0 2rem 60px;
+}
+
+.model-card {
+  width: 220px;
+  text-align: center;
+  background: #f8f9fa;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}
+
+.model-card img {
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+}
+
+.position{
+  text-align: center;
+  font-family: serif;
+  margin: 4rem;
+}
+.btn1{
+  padding: 1rem;
+  border: none;
+  border-radius: 10px;
+  background-color: rgb(17, 17, 18);
+  color: white;
+  font-size: 1.5rem;
+  text-decoration: none;
+
+}
+.btn1:hover{
+  background-color: #023e8a;
+  color: white;
+}

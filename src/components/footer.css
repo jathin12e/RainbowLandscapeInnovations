@@ -1,0 +1,64 @@
+.footer {
+  background-image: url('/images/clear-empty-photographer-studio-background-abstract-background-texture-beauty-dark-light-clear-blue-cold-gray-snowy-white-gradient-flat-wall-floor-empty-spacious-room-winter-interior.jpg');
+ 
+  background-size: cover;
+  color: #0a0a0a;
+ 
+  font-family: 'sans-serif';
+  font-size: 18px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+}
+
+.footer-section{
+    margin-top: 20px;
+}
+
+.footer-logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li a {
+  color: #494747;
+  text-decoration: none;
+  display: block;
+  margin: 6px 0;
+  font-weight: 500;
+  
+}
+
+.footer-section ul li a:hover {
+  color: #0a0a0a;
+}
+
+.social-icons a {
+  color: #ddd;
+  margin-right: 10px;
+  font-size: 18px;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #1da1f2;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  padding-top: 10px;
+  border-top: 1px solid #444;
+  font-size: 14px;
+}

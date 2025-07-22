@@ -1,0 +1,77 @@
+.product-section {
+  font-family: 'Segoe UI', sans-serif;
+  
+  background-image: url('/3522195.jpg');
+  background-size: cover;
+}
+
+.hero-banner {
+ 
+  height: 60vh;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero-content h1 {
+  font-size: 3.5rem;
+  margin-top: 3rem;
+  font-family: serif;
+}
+
+.hero-content p {
+  font-size: 1.5rem;
+  margin-top: 10px;
+  font-family: serif;
+}
+
+.product-grid {
+  max-width: 1200px;
+  margin: auto;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  
+}
+
+.product-row1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  background-color: rgba(16, 16, 16, 0.3);
+  padding: 10px;
+ 
+}
+
+.video-container video {
+  width: 100%;
+  max-width: 550px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.text-container {
+  max-width: 500px;
+  
+}
+
+.text-container h2 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+ color: white;
+  font-family: serif;
+}
+
+.text-container p {
+  font-size: 1.5rem;
+  color: white;
+  font-family: serif;
+}
+
+.reverse {
+  order: 2;
+}

@@ -15,12 +15,14 @@ import Landscape from './components/Landscape'
 import Fountain from './components/fountain'
 import Bioponds from './components/bioponds'
 import Newinnovation from './components/newInnovation'
+import ScrollToTop from './scrolltop'
 
 
 
 const App = () => {
   return (
     <div>
+      <ScrollToTop />
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/about' element={<About />} />

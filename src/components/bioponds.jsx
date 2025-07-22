@@ -4,9 +4,9 @@ import Nav from './nav';
 import Footer from './footer';
 
 const images = [
-  '/public/Screenshot 2025-07-21 010146.png',
-  '/public/Screenshot 2025-07-21 010559.png',
-  '/public/Screenshot 2025-07-21 010814.png'
+  '/Screenshot 2025-07-21 010146.png',
+  '/Screenshot 2025-07-21 010559.png',
+  '/Screenshot 2025-07-21 010814.png'
 ];
 
 const CarouselPage = () => {

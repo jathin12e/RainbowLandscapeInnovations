@@ -54,7 +54,7 @@ const about = () => {
           consultancy, and turnkey project needs, we are at your service. We proudly undertake 
           and successfully complete <br />projects across entire South India.
         </p>
-        <img src='/images/group-business-people-sitting-conference-table.jpg' width={600} height={350}/>
+        <img src='/images/group-business-people-sitting-conference-table.jpg' className='img-2'/>
         <div style={{marginTop:"50px"}}>
           <h1 style={{fontFamily:'san-serif'}}>OUR CORE VALUES</h1>
           <p style={{color:"grey"}}>Our values shape the culture of our organization and define the character of company</p>

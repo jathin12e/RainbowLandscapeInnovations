@@ -52,12 +52,18 @@
 @media (max-width:728px) {
   .nav-links {
     display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
+   flex-wrap: wrap;
     list-style: none;
     align-items: center;
     gap: 30px;
     cursor: pointer;
     margin: 0%;
+    padding-top:10px;
+
+  }
+  .nav-position{
+    flex-direction: column;
+    flex-wrap: wrap;
+
   }
 }

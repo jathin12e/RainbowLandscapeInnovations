@@ -362,7 +362,7 @@
   align-items: center;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
-  height: 90vh;
+  padding: 20px;
 }
 
 .h1{
@@ -391,13 +391,13 @@
   background-image: url('/images/DeWatermark.ai_1745581012091.png');
   background-size: cover;
   background-position: center;
-  height: 70vh;
-  padding-top: 20px;
+  
+  padding: 20px;
   display: flex;
   flex-direction: column;
 }
 
-.service-position {
+.service-position-1 {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
@@ -409,31 +409,32 @@
   white-space: nowrap;
 }
 
-.service-position::-webkit-scrollbar {
+.service-position-1::-webkit-scrollbar {
   display: none;
 }
 
-.service-card {
+.service-card-1 {
   flex: 0 0 auto; /* Prevent card from shrinking */
-width: 500px;
+  width: 100%;
   background-color: #fff;
   border-radius: 12px;
-  overflow: hidden;
+  padding: 20px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
   scroll-snap-align: start;
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
-  margin-left: 20px;
+  margin-left: 10px;
 }
 
-.service-card:hover {
+.service-card-1:hover {
   transform: translateY(-6px);
 }
 
 .service-image {
-  height: 200px;
+  height: 300px;
   object-fit: cover;
+  border-radius: 20px;
 }
 
 .service-title {
@@ -441,4 +442,50 @@ width: 500px;
   font-size: 18px;
   color: #333;
   font-weight: 600;
+}
+
+@media (max-width:728px) {
+  .navbar-overlay {
+  position: relative;
+  width: 0px;
+  z-index: 0;
+  top: -1;
+}
+.carousel-hero {
+  position: none;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.bg-image{
+  flex-direction: column-reverse;
+  justify-content: space-around;
+  align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  
+}
+.h1{
+margin-top: 20px;
+}
+.service-card-1 {
+  flex: 0 0 auto; /* Prevent card from shrinking */
+  width: 100%;
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  scroll-snap-align: start;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  margin-left: 10px;
+}
+.service-image {
+  height: 200px;
+  object-fit: cover;
+  border-radius: 20px;
+}
 }

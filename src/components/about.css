@@ -110,6 +110,10 @@ margin-top: 20px;
     margin: 10px 0;
   }
 }
+.img-2{
+    width:300px;
+    height:350;
+}
 
 @media screen and (max-width: 480px) {
   .bg-image2 {
@@ -123,9 +127,10 @@ margin-top: 20px;
   }
    .img-1{
 height:100%;
-width:50%;
-
+width:100%;
 }
+ 
+
   .text-position {
     font-size: 14px;
     padding: 8px;

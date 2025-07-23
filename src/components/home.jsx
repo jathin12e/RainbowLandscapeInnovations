@@ -144,10 +144,10 @@ const Home = () => {
 
       <div className='bg-image-1'>
         <h3 style={{ marginLeft: "30px", fontFamily: "sans-serif" }}>We Offer Best Services </h3>
-        <div className='service-position'>
+        <div className='service-position-1'>
           {services.map((u) => (
             <Link to={u.url} key={u.id} style={{ textDecoration: "none" }}>
-              <div className='service-card'>
+              <div className='service-card-1'>
                 <img src={u.src} alt='service' className='service-image' />
                 <h2 className='service-title'>{u.name}</h2>
               </div>

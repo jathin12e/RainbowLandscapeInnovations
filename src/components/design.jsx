@@ -8,7 +8,6 @@ const images = [
   '/images/Screenshot 2025-07-19 233358.png',
   '/images/Screenshot 2025-07-20 180308.png',
   '/images/WhatsApp Image 2025-07-20 at 23.26.15_fedf3317.jpg',
-  '/public/Screenshot 2025-07-21 010146.png'
 ];
 
 const CarouselPage = () => {

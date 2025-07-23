@@ -15,6 +15,16 @@ const location = [
     name:"Hyderabad",
     place:"Branch Office : #401 ,4th Floor , Central Park -Phase 2 , Kondapur , Telangana, Pincode : 500084",
     number:"+91 98450 57127"
+  },
+   {
+    name:"Mumbai",
+    place:"Branch Office : b1 girikunj industrial estate Andheri east Mumbai , 400093",
+    number:"+91 98450 57127"
+  },
+  {
+    name:"Delhi",
+    place:"Branch Office : SG-Alpha Tower, Tower, 1,504, Sector 9, Vasundhara, Ghaziabad, Uttar Pradesh 201012",
+    number:"+91 98450 57127"
   }
   
 ]

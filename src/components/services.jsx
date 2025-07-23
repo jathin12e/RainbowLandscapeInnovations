@@ -45,14 +45,14 @@ const products = [
 
 const ProductsPage = () => {
   return (
+    <div>
+      <Nav />
     <div style={{
       backgroundImage: `url('/images/ombre-blue-curve-light-blue-background-vector.jpg')`,
       backgroundSize: 'cover'
     }}>
       <div className="product-page">
-        <div className='navbar-overlay'>
-          <Nav />
-        </div>
+        
         <div className="background-overlay">
           <h1 style={{ color: "black", marginTop: "30px" }}>Our Services</h1>
 
@@ -91,6 +91,7 @@ const ProductsPage = () => {
       </div>
       <Footer />
     </div>
+  </div>
   );
 };
 

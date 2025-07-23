@@ -44,9 +44,5 @@
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 @media (max-width:728px){
-  .design-image {
-  flex: 1;
-  min-width: 300px;
-  text-align: center;
-}
+  
 }

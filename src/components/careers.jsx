@@ -5,6 +5,8 @@ import Footer from './footer';
 
 const CareersPage = () => {
   return (
+    <div>
+      <Nav />
     <div className="careers-page">
       
 
@@ -27,6 +29,7 @@ const CareersPage = () => {
       </div>
 
       <Footer />
+    </div>
     </div>
   );
 };

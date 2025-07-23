@@ -84,6 +84,7 @@
 /* Left Image */
 .left-image img {
   border-radius: 15px;
+  width: 300px;
 }
 
 }

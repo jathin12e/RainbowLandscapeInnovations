@@ -23,10 +23,10 @@ const CarouselPage = () => {
   }, []);
 
   return (
+    <div>
+      <Nav />
     <div className="carousel-page" >
-      <div className='navbar-overlay'>
-        <Nav />
-      </div>
+      
 
       {/* Carousel Section */}
       <div className="carousel-container">
@@ -122,6 +122,7 @@ const CarouselPage = () => {
 
 
       <Footer />
+    </div>
     </div>
   );
 };

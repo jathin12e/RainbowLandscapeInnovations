@@ -46,12 +46,15 @@ const ServiceEnquiry = () => {
   };
 
   return (
+
+    <div>
+      <Nav />
     <div style={{
       backgroundImage: `url('/images/rm222-mind-26.jpg')`,
       backgroundSize: "110% 100%",
       backgroundRepeat: "no-repeat"
     }}>
-      <Nav />
+      
 
       <div style={styles.container}>
         <div className="left-image">
@@ -90,6 +93,7 @@ const ServiceEnquiry = () => {
 
       <Feed />
       <Footer />
+    </div>
     </div>
   );
 };

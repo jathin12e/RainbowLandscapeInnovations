@@ -1,69 +1,73 @@
-.nav-links {
-    display: flex;
-    list-style: none;
-    align-items: center;
-    gap: 30px;
-    cursor: pointer;
-    margin: 0%;
-  }
-  
-  .hovering {
-    position: relative;
-    font-size: 16px;
-    font-family: "Gill Sans", sans-serif;
-  }
-  
-  .hovering::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    transform: scaleX(0);
-    height: 2px;
-    bottom: 0;
-    left: 0;
-    background-color: red;
-    transform-origin: bottom right;
-    transition: transform 0.25s ease-out;
-  }
-  
-  .hovering:hover::after {
-    transform: scaleX(1);
-    transform-origin: bottom left;
-  }
-
-.nav-position{
+.nav-position {
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  cursor: pointer;
-  background-color: white;
-  color: black;
+  justify-content: space-between;
   align-items: center;
-  background-size: auto;
-  
   padding: 1%;
-  box-shadow: rgba(146, 140, 140, 0.4) 0px 30px 90px;
   border-radius: 20px;
-  max-width:90%;
-  margin-left: 5%;
-  margin-top: 10px;
+  max-width: 90%;
+  margin: 10px auto 0 auto;
+  position: relative;
+}
+.hovering {
+  color: black;
+}
+.nav-links {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  gap: 30px;
+  margin: 0;
+  color: black;
 }
 
-@media (max-width:728px) {
-  .nav-links {
-    display: flex;
-   flex-wrap: wrap;
-    list-style: none;
-    align-items: center;
-    gap: 30px;
-    cursor: pointer;
-    margin: 0%;
-    padding-top:10px;
+.menu-icon {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
 
-  }
-  .nav-position{
+/* =============== MOBILE VIEW =============== */
+@media (max-width: 728px) {
+  .nav-position {
     flex-direction: column;
-    flex-wrap: wrap;
+    align-items: flex-start;
+  }
 
+  .menu-icon {
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    z-index: 1001;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: row;
+    gap: 15px;
+    width: 100%;
+    margin-top: 60px;
+    padding: 10px 20px;
+    background-color: white; /* or your navbar background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    position: absolute;
+    top: 70px;
+    left: 0;
+  }
+
+  .nav-links.nav-active {
+    display: flex;
+  }
+
+  .nav-links a {
+    width: 100%;
+  }
+
+  .nav-links li {
+    text-align: left;
+    width: 100%;
+    padding: 10px 0;
+    font-size: 18px;
   }
 }

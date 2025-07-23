@@ -50,10 +50,10 @@ const products = [
 
 const ProductShowcase = () => {
   return (
+    <div>
+      <Nav />
     <div className="product-section">
-      <div className='navbar-overlay'>
-         <Nav />
-      </div>
+     
       <div className="hero-banner">
        
         <div className="hero-content">
@@ -82,6 +82,7 @@ const ProductShowcase = () => {
       <Footer />
      
 
+    </div>
     </div>
   );
 };

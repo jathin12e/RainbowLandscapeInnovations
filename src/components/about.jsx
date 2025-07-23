@@ -22,10 +22,9 @@ const location = [
 const about = () => {
   return (
     <div> 
+      <Nav />
       <div className='bg-image2'>
-        <div className='navbar-overlay'>
-        <Nav />
-        </div>
+        
         <h1 style={{fontFamily: 'Arial, Helvetica, sans-serif',fontWeight: 'bold' , color:"white"}}>ABOUT US</h1>
       </div>
       <div className='bg-image3'>

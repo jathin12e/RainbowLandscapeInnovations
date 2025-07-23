@@ -90,6 +90,9 @@ const Home = () => {
   return (
     <div>
       <div className='carousel-section'>
+        <div>
+            <Nav />
+          </div>
         <div className='carousel-hero'>
           <img
             src={images[index].src}
@@ -97,9 +100,7 @@ const Home = () => {
             className={`carousel-bg ${fade ? 'fade-in-image' : 'fade-out-image'}`}
           />
           <div className='gradient-overlay'></div>
-          <div className='navbar-overlay'>
-            <Nav />
-          </div>
+          
           <div className='carousel-nav'>
             <button className='nav-arrow left' onClick={prevSlide}><FaArrowLeft /></button>
             <button className='nav-arrow right' onClick={nextSlide}><FaArrowRight /></button>

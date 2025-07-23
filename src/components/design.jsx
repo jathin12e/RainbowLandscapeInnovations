@@ -24,10 +24,10 @@ const CarouselPage = () => {
   }, []);
 
   return (
+    <div>
+    <Nav />
     <div className="carousel-page">
-      <div className="navbar-overlay">
-        <Nav />
-      </div>
+      
 
       {/* Carousel Section */}
       <div className="carousel-container">
@@ -66,7 +66,7 @@ We recommend and incorporate state-of-the-art products sourced from around the w
             </div>
             
           </div>
-          <img src='/Screenshot 2025-07-21 010559.png' width={500}  style={{marginLeft:"4rem" , borderRadius:'20px'}}/>
+          
         </div>
       </div>
 
@@ -137,6 +137,7 @@ We recommend and incorporate state-of-the-art products sourced from around the w
       </div>
 
       <Footer />
+    </div>
     </div>
   );
 };

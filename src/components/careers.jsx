@@ -11,7 +11,7 @@ const CareersPage = () => {
       
 
       <header className="careers-hero">
-        <div className='navbar-overlay'><Nav /></div>
+        
         <div className="overlay">
           <h1 style={{marginTop:"70px"}}>Join Our Team</h1>
           <p>We’re always looking for passionate individuals to grow with us.</p>

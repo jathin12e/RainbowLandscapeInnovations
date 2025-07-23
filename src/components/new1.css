@@ -84,4 +84,15 @@
   .video-container.reverse{
     flex-direction: column-reverse;
   }
+  .text-container p {
+  font-size: 1rem;
+  color: white;
+  font-family: serif;
+}
+.text-container h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+ color: white;
+  font-family: serif;
+}
 }

@@ -89,10 +89,9 @@ const Home = () => {
 
   return (
     <div>
+      <Nav />
       <div className='carousel-section'>
-        <div>
-            <Nav />
-          </div>
+        
         <div className='carousel-hero'>
           <img
             src={images[index].src}
@@ -105,23 +104,24 @@ const Home = () => {
             <button className='nav-arrow left' onClick={prevSlide}><FaArrowLeft /></button>
             <button className='nav-arrow right' onClick={nextSlide}><FaArrowRight /></button>
           </div>
-          <div className={`carousel-caption ${fade ? 'fade-in-text' : 'fade-out-text'}`}>
-            <h1 style={{ fontSize: "4rem", fontFamily: "serif", marginRight: "4rem" }}>{images[index].label}</h1>
+          <div className='carousel-caption'>
+            <h1 className='h1-1'>{images[index].label}</h1>
             <p>{images[index].para}</p>
           </div>
         </div>
 
-        <div className='carousel-thumbnails-full'>
-          {images.map((img, i) => (
-            <div
-              key={i}
-              className={`thumb ${i === index ? 'active-thumb' : ''}`}
-              onClick={() => setBackgroundImage(i)}
-            >
-              <img src={img.src} alt={`thumb-${i}`} />
-            </div>
-          ))}
-        </div>
+<div className='carousel-thumbnails-full'>
+  {images.map((img, i) => (
+    <div
+      key={i}
+      className={`thumb ${i === index ? 'active-thumb' : ''}`}
+      onClick={() => setBackgroundImage(i)}
+    >
+      <img src={img.src} alt={`thumb-${i}`} />
+    </div>
+  ))}
+</div>
+
       </div>
 
       <div className='bg-image'>
@@ -140,7 +140,7 @@ const Home = () => {
           </p>
           <Link to="/about"><button className='button'>Know More</button></Link>
         </div>
-        <img src="/images/WhatsApp Image 2023-12-06 at 11.20.58(1).jpeg" alt="image" width={400} style={{ borderRadius: "20px" }} />
+        <img src="/images/WhatsApp Image 2023-12-06 at 11.20.58(1).jpeg" alt="image" className='img-4' style={{ borderRadius: "20px" }} />
       </div>
 
       <div className='bg-image-1'>

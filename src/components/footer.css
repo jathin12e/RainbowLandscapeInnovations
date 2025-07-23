@@ -69,9 +69,7 @@
   flex-direction: column;
   padding: 10px;
 }
-ul{
-  display: flex;
-}
+
 li{
   margin-left: 10px;
 }

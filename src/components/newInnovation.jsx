@@ -10,9 +10,31 @@ const products = [
     videoUrl: 'https://res.cloudinary.com/dfzliqupz/video/upload/v1753161280/Robotic_Pool_Cleaner_dizolk.mp4',
   },
   {
+    name: 'Jumping Jets',
+    description: 'Jumping jets are special water fountain features where water streams appear to "jump" from one point to another in smooth arcs. This effect is created using precise timing and laminar flow technology, often with lights for added visual appeal. They are popular in amusement parks, malls, and garden landscapes.',
+    videoUrl: 'https://res.cloudinary.com/dfzliqupz/video/upload/v1753266060/Jumping_jets_1_ofqdz6.mp4',
+  },
+  {
+    name: 'Blue Connect',
+    description: 'Blue Connect is a smart pool analyzer that helps monitor your swimming pool’s water quality in real-time using your smartphone.',
+    videoUrl: 'https://res.cloudinary.com/dfzliqupz/video/upload/v1753266080/Blue_riot_ma7leq.mp4',
+  },
+  
+   {
+    name: 'Neolysis',
+    description: 'Neolysis in the context of swimming pools is a modern, eco-friendly water disinfection technology. Its often a branded or proprietary name used by certain pool system manufacturers to describe a chemical-free or low-chemical water purification system.',
+    videoUrl: 'https://res.cloudinary.com/dfzliqupz/video/upload/v1753266081/Video_-_Neolysis_-_2022_EN_mqb3wn.mp4',
+  },
+  
+  {
+    name: 'Advanced Oxidation Process',
+    description: 'Advanced Oxidation Process is a powerful water and wastewater treatment method. It uses oxidants like ozone (O₃), hydrogen peroxide (H₂O₂), or UV light to generate hydroxyl radicals (•OH) that break down harmful contaminants and organic pollutants, making water cleaner and safer.',
+    videoUrl: 'https://res.cloudinary.com/dfzliqupz/video/upload/v1753266062/AOP_lwobge.mp4',
+  },
+  {
     name: 'Counter-Current System',
     description: 'Counter current systems create a strong, adjustable water flow in pools, allowing users to swim continuously in place. Ideal for swim training, aquatic therapy, and fitness, they transform small pools into powerful workout zones.',
-    videoUrl: 'https://res.cloudinary.com/dfzliqupz/video/upload/v1753161283/Counter_Current_xlwlba.mp4',
+    videoUrl: 'https://res.cloudinary.com/dfzliqupz/video/upload/v1753266067/Counter_Current_lyu0nf.mp4',
   },
   {
     name: 'Pool Threadmill',

@@ -19,6 +19,7 @@ const Footer = () => {
         </div>
 
         {/* Column 2: Navigation */}
+      <div className="position-3">
         <div className="footer-section">
           <h4>Quick Links</h4>
           <ul>
@@ -42,6 +43,7 @@ const Footer = () => {
             
           </ul>
         </div>
+      </div>
         <div style={{marginTop:"20px"}}>
           <h4>Get In Touch</h4>
           <p><Link to='/contact' style={{color:"black"}}>Question or Feedback?</Link></p>

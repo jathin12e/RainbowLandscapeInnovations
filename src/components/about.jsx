@@ -4,6 +4,7 @@ import Nav from './nav'
 import TrackRecord from './trackrecord'
 import TeamSection from './teams'
 import Footer from './footer'
+import Values from './values'
 
 const location = [
   {
@@ -40,35 +41,33 @@ const about = () => {
       <div className='bg-image3'>
         <h1 style={{marginBottom:"30px" , textShadow: '2px 2px 8px #878282ff', fontFamily:'san-serif'}}>RAINBOW LANDSCAPE INNOVATIONS PVT. LTD</h1>
         <p className='text-position'>Our company is involved in structural, hydraulic, and technical design of Swimming Pools,
-            Fountain Technology,<br /> Jacuzzi Pools, and Irrigation Systems for the past 20 years. Apart 
-            from design, we are extensively involved in the <br />implementation of these services. Aesthetically
-          and technologically advanced swimming pool designs are our <br />core strength. We undertake projects for 
+            Fountain Technology,Jacuzzi Pools, and Irrigation Systems for the past 20 years. Apart 
+            from design, we are extensively involved in the implementation of these services. Aesthetically
+          and technologically advanced swimming pool designs are our core strength. We undertake projects for 
           both commercial
             and residential pools, ensuring each one is carefully
-            designed <br />and executed based on the specific needs of our 
+            designedand executed based on the specific needs of our 
             clients and architects.
         </p>
         <p className='text-position'>
           For enhanced comfort, we also design and execute Jacuzzi and Heating 
-          Pools. Water, being a vital part of life,<br /> is also a source of calmness 
+          Pools. Water, being a vital part of life, is also a source of calmness 
           and beauty in any living space. Our fountain designs aim to provide this
-          peace <br />while also adding aesthetic value. Backed by strong hydraulic knowledge, 
-          we customize and recreate fountain<br /> systems to match the unique requirements 
+          peace while also adding aesthetic value. Backed by strong hydraulic knowledge, 
+          we customize and recreate fountain systems to match the unique requirements 
           of every customer.
         </p>
         <p className='text-position'>
           With water scarcity becoming a growing concern, we prioritize efficient planning 
-          and usage in all our irrigation designs.<br /> Our landscape irrigation systems are developed 
-          with great care to ensure both sustainability and functionality. For all your <br />design, 
+          and usage in all our irrigation designs. Our landscape irrigation systems are developed 
+          with great care to ensure both sustainability and functionality. For all your design, 
           consultancy, and turnkey project needs, we are at your service. We proudly undertake 
-          and successfully complete <br />projects across entire South India.
+          and successfully complete projects across entire South India.
         </p>
-        <img src='/images/group-business-people-sitting-conference-table.jpg' className='img-2'/>
-        <div style={{marginTop:"50px"}}>
-          <h1 style={{fontFamily:'san-serif'}}>OUR CORE VALUES</h1>
-          <p style={{color:"grey"}}>Our values shape the culture of our organization and define the character of company</p>
-          <img src='/images/Untitled Diagram.drawio (2)-Photoroom.png'  className='img-1'/>
+        <div className='d-flex flex-row justify-content-center m-2 ml-5'>
+               <button className='btn btn-primary btn-inline-primary' >Know More</button>
         </div>
+        <Values />
         <div className='locate-position'>
           <h1 style={{fontFamily:'san-serif'}}>Office Locations</h1>
           <p style={{color:"grey"}}>We have strong presence across India with multiple branches in major cities. Our regional offices <br />ensure quick service, better coordination, 

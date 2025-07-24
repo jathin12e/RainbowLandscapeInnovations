@@ -63,7 +63,9 @@ We recommend and incorporate state-of-the-art products sourced from around the w
               <img src="/images/Screenshot 2025-07-20 235513.png" alt="Extra 2" />
               
             </div>
-            
+            <div className='d-flex flex-row justify-content-center m-2 ml-5'>
+               <button className='btn btn-primary btn-inline-primary' >More images</button>
+            </div>
           </div>
           
         </div>

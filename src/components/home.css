@@ -207,7 +207,7 @@
 .carousel-hero {
   position: relative;
   height: 100vh;
-  width: 50%;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -288,7 +288,7 @@
   align-items: flex-start;
   overflow-x: auto;
   overflow-y: hidden;
-  scroll-snap-type: x mandatory;
+  
   gap: 20px;
   padding: 20px 10px;
   white-space: nowrap;

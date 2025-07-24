@@ -60,6 +60,9 @@ const CarouselPage = () => {
               <img src="/images/Bio-Ponds-1.jpg" alt="Extra 1" />
               <img src="/Screenshot 2025-07-21 003347.png" alt="Extra 2" />
             </div>
+            <div className='d-flex flex-row justify-content-center m-2 ml-5'>
+               <button className='btn btn-primary btn-inline-primary' >More images</button>
+            </div>
           </div>
         </div>
       </div>

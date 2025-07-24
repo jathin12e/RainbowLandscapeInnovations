@@ -15,12 +15,12 @@ const stats = [
   },
   {
     icon: < FaSpinner />,
-    count: '200+',
+    count: '100+',
     label: 'Ongoing Projects ',
   },
   {
     icon: <FaHandshake />,
-    count: '2000+',
+    count: '3000+',
     label: 'Clients',
   }
 ];

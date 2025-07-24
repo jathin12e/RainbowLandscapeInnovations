@@ -19,6 +19,7 @@ import ScrollToTop from './scrolltop'
 
 
 
+
 const App = () => {
   return (
     <div>
@@ -37,6 +38,7 @@ const App = () => {
         <Route path='/fountain' element={<Fountain />} />
         <Route path='/bioponds' element={<Bioponds />} />
         <Route path='/newinnovation' element={<Newinnovation />} />
+        
       </Routes>
     </div>
   )

@@ -96,7 +96,7 @@ const Home = () => {
           <img
             src={images[index].src}
             alt='background'
-            className={`carousel-bg ${fade ? 'fade-in-image' : 'fade-out-image'}`}
+            className='carousel-bg'
           />
           <div className='gradient-overlay'></div>
           
@@ -165,6 +165,9 @@ const Home = () => {
           <source src="https://res.cloudinary.com/dfzliqupz/video/upload/v1753163375/Raibow_Landscape_Innovations_-_01_1_1_wkz1ib.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
+        <div className='d-flex flex-row justify-content-center m-2'>
+           <button className='btn btn-primary btn-inline-primary' >More Videos</button>
+        </div>
       </div>
 
       <div style={{ width: "60%", margin: "auto", padding: "40px 0" }}>

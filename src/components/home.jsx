@@ -15,7 +15,7 @@ const images = [
   { src: '/images/Rainbow PIX 8.jpg', label: 'Swimming Pools', para: '' },
   { src: '/images/istockphoto-480651803-612x612.jpg', label: 'Landscape Irrigation', para: '' },
   { src: '/images/WhatsApp Image 2025-07-20 at 23.26.15_fedf3317.jpg', label: 'Fountain Technology', para: '' },
-  { src: '/Screenshot 2025-07-21 010146.png', label: 'Bio Ponds', para: '' }
+  { src: '/WhatsApp Image 2024-09-05 at 13.50.56.jpeg', label: 'Bio Ponds', para: '' }
 ];
 
 const services = [
@@ -89,7 +89,9 @@ const Home = () => {
 
   return (
     <div>
-      <Nav />
+      <div>
+        <Nav />
+      </div>
       <div className='carousel-section'>
         
         <div className='carousel-hero'>
@@ -125,20 +127,20 @@ const Home = () => {
       </div>
 
       <div className='bg-image'>
-        <div ref={ref} className={`scroll-slide-in ${isVisible ? 'visible' : ''}`}>
+        <div ref={ref} className={`scroll-slide-bottom ${isVisible ? 'visible' : ''}`}>
           <h4 className='h1'>About Us</h4>
-          <p style={{ color: "gray", fontSize: "15px" }}>
-            Rainbow Technologies is involved in structural, hydraulic and Technical design of <br />
-            Swimming Pools, Fountain Technology, Jacuzzi Pools, and Irrigation Systems for <br />
-            the last 20 years. Apart from Design we are extensively involved in implementation <br />
+          <p style={{ color: "gray" , fontFamily:"Arial", fontSize: "16px" , margin:"30px"}}>
+            Rainbow Technologies is involved in structural, hydraulic and technical design of 
+            swimming Pools, fountain technology, jacuzzi pools, and irrigation systems for 
+            the last 20 years. Apart from design we are extensively involved in implementation 
             of the above.
-          </p>
-          <p style={{ color: "gray", fontSize: "15px" }}>
-            Aesthetically and Technologically advanced Swimming Pool Designs are our basic <br />
-            strength. We are involved in Commercial and Residential pools. Each pool is designed <br />
+            Aesthetically and Technologically advanced swimming pool Designs are our basic 
+            strength. We are involved in commercial and residential pools. Each pool is designed 
             and executed with the requirement of our clients and architects.
+          
           </p>
-          <Link to="/about"><button className='button'>Know More</button></Link>
+          
+          <Link to="/about"><button className='button-2'>Know More</button></Link>
         </div>
         <img src="/images/WhatsApp Image 2023-12-06 at 11.20.58(1).jpeg" alt="image" className='img-4' style={{ borderRadius: "20px" }} />
       </div>
@@ -166,7 +168,7 @@ const Home = () => {
           Your browser does not support the video tag.
         </video>
         <div className='d-flex flex-row justify-content-center m-2'>
-           <button className='btn btn-primary btn-inline-primary' >More Videos</button>
+           
         </div>
       </div>
 

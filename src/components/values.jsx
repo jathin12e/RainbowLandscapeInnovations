@@ -1,15 +1,14 @@
-import React from 'react';
-import './values.css'; // CSS file below
+import React, { useEffect, useRef } from 'react';
+import './values.css';
 
-
-import { 
-  FaHandsHelping, 
-  FaUserShield, 
-  FaLightbulb, 
-  FaPeopleArrows, 
-  FaSmile, 
-  FaCheckCircle, 
-  FaClock 
+import {
+  FaHandsHelping,
+  FaUserShield,
+  FaLightbulb,
+  FaPeopleArrows,
+  FaSmile,
+  FaCheckCircle,
+  FaClock
 } from 'react-icons/fa';
 
 const values = [
@@ -50,12 +49,36 @@ const values = [
   }
 ];
 
-
 export default function CoreValues() {
+  const scrollRef = useRef(null);
+
+  useEffect(() => {
+    const container = scrollRef.current;
+    let animationFrameId;
+    let scrollAmount = 1;
+
+    const scroll = () => {
+      if (container) {
+        container.scrollLeft += scrollAmount;
+
+        // Reset to start if end is reached
+        if (container.scrollLeft >= container.scrollWidth - container.clientWidth) {
+          container.scrollLeft = 0;
+        }
+      }
+
+      animationFrameId = requestAnimationFrame(scroll);
+    };
+
+    animationFrameId = requestAnimationFrame(scroll);
+
+    return () => cancelAnimationFrame(animationFrameId);
+  }, []);
+
   return (
     <section className="core-values-section">
       <h2 className="core-values-heading">Our Core Values</h2>
-      <div className="values-grid">
+      <div className="values-grid auto-scroll" ref={scrollRef}>
         {values.map((value, index) => (
           <div className="value-card" key={index}>
             <div className="icon-wrapper">{value.icon}</div>

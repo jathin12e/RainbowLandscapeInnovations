@@ -16,6 +16,7 @@ import Fountain from './components/fountain'
 import Bioponds from './components/bioponds'
 import Newinnovation from './components/newInnovation'
 import ScrollToTop from './scrolltop'
+import Poolimages from './components/poolimages'
 
 
 
@@ -38,7 +39,7 @@ const App = () => {
         <Route path='/fountain' element={<Fountain />} />
         <Route path='/bioponds' element={<Bioponds />} />
         <Route path='/newinnovation' element={<Newinnovation />} />
-        
+        <Route path='/pool/images' element={<Poolimages />} />
       </Routes>
     </div>
   )

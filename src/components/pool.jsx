@@ -26,7 +26,7 @@ const CarouselPage = () => {
       <div className='navbar-overlay'>
         <Nav />
       </div>
-      <div style={{ height: '80px' }}></div>  
+    
       {/* Carousel Section */}
       <div className="carousel-container">
         <img
@@ -53,13 +53,16 @@ const CarouselPage = () => {
             
             <p style={{fontFamily:"serif" ,color:"gray" , fontSize:"1.3rem"}}>
               Planning and execution of Swimming Pools, We take up turnkey Swimming solutions, from Shell work to Complete Filtration, Jacuzzi Pools, Heating Systems, Pool Covers, automatic Pool cleaning etc. We also undertake Electro Mechanical works only. Our Swimming Pool scope of work includes, Civil Works, Filtration Works, Electrical Works, Plumbing Works, and Under Water Lighting.
+              <br /><span style={{color:'red'}}>click &nbsp;<a href='/pool/2025 - ROSA GRES UNIQUE POOLS.pdf'>here</a> for more about swimming pools</span>
             </p>
+            <p></p>
             <div className="about-extra-images">
               <img src="/images/Screenshot 2025-07-20 001054.png" alt="Extra 1" />
               <img src="/images/WhatsApp Image 2024-11-27 at 6.18.38 PM.jpeg" alt="Extra 2" />
             </div>
             <div className='d-flex flex-row justify-content-center m-2 ml-5'>
-               <button className='btn btn-primary btn-inline-primary' >More images</button>
+               <Link to="/pool/images"><button className='btn btn-primary btn-inline-primary' >More images</button></Link>
+               
             </div>
           </div>
         </div>

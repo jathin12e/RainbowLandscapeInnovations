@@ -5,7 +5,7 @@ import Footer from './footer';
 import { Link } from 'react-router-dom';
 
 const images = [
-  '/Screenshot 2025-07-21 010146.png',
+  '/WhatsApp Image 2024-09-05 at 13.50.56.jpeg',
   '/Screenshot 2025-07-21 010559.png',
   '/Screenshot 2025-07-21 010814.png'
 ];
@@ -48,7 +48,7 @@ const CarouselPage = () => {
         <h1 style={{fontFamily:"serif" , fontSize:"4rem"}}>Biological Pond Systems &<br /> Aquatic Design</h1>
         <div className="about-container">
           <div className="about-image">
-            <img src="/images/Screenshot 2025-07-20 233709.png" alt="About Us" />
+            <img src="/WhatsApp Image 2024-09-05 at 13.50.56.jpeg" alt="About Us" />
           </div>
           <div className="about-content">
             
@@ -58,7 +58,7 @@ const CarouselPage = () => {
             </p>
             <div className="about-extra-images">
               <img src="/images/Bio-Ponds-1.jpg" alt="Extra 1" />
-              <img src="/Screenshot 2025-07-21 003347.png" alt="Extra 2" />
+              <img src="/WhatsApp Image 2024-09-05 at 13.55.02 (1).jpeg" alt="Extra 2" />
             </div>
             <div className='d-flex flex-row justify-content-center m-2 ml-5'>
                <button className='btn btn-primary btn-inline-primary' >More images</button>

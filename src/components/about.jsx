@@ -62,11 +62,10 @@ const about = () => {
           and usage in all our irrigation designs. Our landscape irrigation systems are developed 
           with great care to ensure both sustainability and functionality. For all your design, 
           consultancy, and turnkey project needs, we are at your service. We proudly undertake 
-          and successfully complete projects across entire South India.
+          and successfully complete projects across entire South India. 
+          <br /><span style={{color:'red'}}>click &nbsp;<a href='/pool/RAINBOW 2022.pdf' target='_blanck'>here</a> for more about RLI</span>
         </p>
-        <div className='d-flex flex-row justify-content-center m-2 ml-5'>
-               <button className='btn btn-primary btn-inline-primary' >Know More</button>
-        </div>
+        
         <Values />
         <div className='locate-position'>
           <h1 style={{fontFamily:'san-serif'}}>Office Locations</h1>

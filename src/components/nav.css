@@ -1,77 +1,99 @@
-.nav-position {
+/* NAVBAR STYLES */
+.navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1%;
-  border-radius: 20px;
-  max-width: 90%;
-  margin: 10px auto 0 auto;
-  position: relative;
-  margin-bottom: 10px;
+  padding: 1% 5%;
+  background-color: #ffffff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  border-radius: 0 0 20px 20px;
+  width: 100%;
 }
-.hovering {
-  color: black;
+
+/* Logo */
+.logo img {
+  max-width: 130px;
+  height: auto;
 }
+
+/* Menu Toggle (Hamburger) */
+.menu-toggle {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: #333;
+}
+
+/* Navigation Links */
 .nav-links {
   display: flex;
   list-style: none;
-  align-items: center;
   gap: 30px;
-  margin: 0;
-  color: black;
 }
 
-.menu-icon {
-  display: none;
-  font-size: 24px;
-  cursor: pointer;
+.nav-link {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  padding: 8px 12px;
+  border-radius: 10px;
 }
 
-/* =============== MOBILE VIEW =============== */
-@media (max-width: 728px) {
-  .nav-position {
-    flex-direction: column;
-    align-items: flex-start;
-  }
+.nav-link:hover {
+  background-color: #007bff;
+  color: #fff;
+}
 
-  .menu-icon {
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .menu-toggle {
     display: block;
-    position: absolute;
-    right: 20px;
-    top: 20px;
-    z-index: 1001;
   }
 
   .nav-links {
-    display: none;
-    flex-direction: column;
-    gap: 15px;
-    width: 100%;
-    margin-top: 60px;
-    padding: 10px 20px;
-    background-color: white; /* or your navbar background */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
     position: absolute;
-    top: 70px;
+    top: 80px;
     left: 0;
+    right: 0;
+    background-color: #fff;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    padding: 15px 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    display: none;
+    animation: fadeSlide 0.3s ease forwards;
   }
-  .hovering:hover{
-      background-color: blue;
-      color: white;
-  }
-  .nav-links.nav-active {
+
+  .nav-links.active {
     display: flex;
   }
 
-  .nav-links a {
+  .nav-links li {
     width: 100%;
   }
 
-  .nav-links li {
-    text-align: left;
+  .nav-link {
+    display: block;
     width: 100%;
-    padding: 10px 0;
-    font-size: 18px;
+    padding: 12px 10px;
+    font-size: 1rem;
+    border-radius: 8px;
+  }
+}
+
+/* Smooth Slide Animation */
+@keyframes fadeSlide {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

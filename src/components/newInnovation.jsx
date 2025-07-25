@@ -10,6 +10,16 @@ const products = [
     videoUrl: 'https://res.cloudinary.com/dfzliqupz/video/upload/v1753161280/Robotic_Pool_Cleaner_dizolk.mp4',
   },
   {
+    name: 'Movable Floor',
+    description: 'A movable floor swimming pool is an innovative design that allows the pool floor to be raised or lowered with the push of a button. When raised, the pool floor becomes a flat surface—perfect for other uses like a patio, event space, or play area. When lowered, it reveals a full-depth swimming pool, offering complete functionality and safety.',
+    videoUrl: 'https://res.cloudinary.com/dfzliqupz/video/upload/v1753423758/Movable_Floor_erypvv.mp4'
+  },
+  {
+    name: 'Nano Fibre Filter',
+    description: 'A Nano Fibre Filter is an advanced filtration technology made using ultra-fine fibers—thousands of times thinner than a human hair. These filters provide high efficiency in capturing microscopic particles like dust, bacteria, and even viruses, while still allowing air or liquid to pass through easily',
+    videoUrl: 'https://res.cloudinary.com/dfzliqupz/video/upload/v1753429264/NanoFiber_Filter_eto2c2.mp4'
+  },
+  {
     name: 'Jumping Jets',
     description: 'Jumping jets are special water fountain features where water streams appear to "jump" from one point to another in smooth arcs. This effect is created using precise timing and laminar flow technology, often with lights for added visual appeal. They are popular in amusement parks, malls, and garden landscapes.',
     videoUrl: 'https://res.cloudinary.com/dfzliqupz/video/upload/v1753266060/Jumping_jets_1_ofqdz6.mp4',
@@ -19,7 +29,11 @@ const products = [
     description: 'Blue Connect is a smart pool analyzer that helps monitor your swimming pool’s water quality in real-time using your smartphone.',
     videoUrl: 'https://res.cloudinary.com/dfzliqupz/video/upload/v1753266080/Blue_riot_ma7leq.mp4',
   },
-  
+  {
+    name: 'Hydrospin',
+    description: 'HydroSpin is an innovative water-powered device that generates electricity from the flow of water within pipelines. It uses a mini turbine placed inside the water line to harvest energy without affecting water pressure, making it ideal for remote monitoring of water systems where power access is limited.',
+    videoUrl: 'https://res.cloudinary.com/dfzliqupz/video/upload/v1753430782/Hydrospin_ydzm3b.mp4',
+  },
    {
     name: 'Neolysis',
     description: 'Neolysis in the context of swimming pools is a modern, eco-friendly water disinfection technology. Its often a branded or proprietary name used by certain pool system manufacturers to describe a chemical-free or low-chemical water purification system.',

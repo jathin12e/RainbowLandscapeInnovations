@@ -1,43 +1,54 @@
+/* Reset and Base */
 body {
   margin: 0;
   padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8f9fa;
+  color: #212529;
+  scroll-behavior: smooth;
 }
 
 .product-page {
-  
-  background-size: cover;
+  padding: 80px 20px;
   min-height: 100vh;
-  padding: 60px 20px;
- 
-  font-family:Georgia, 'Times New Roman', Times, serif;
-
+  background: linear-gradient(to right, #f5f7fa, #e2e8f0);
 }
 
 .background-overlay {
-  
-  padding: 30px;
-  border-radius: 16px;
   max-width: 1200px;
   margin: 0 auto;
+  padding: 40px;
+  border-radius: 20px;
+  background: #fff;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  animation: fadeIn 1s ease-in;
 }
 
 .product-page h1 {
   text-align: center;
-  font-size: 2.5rem;
-  color: #222;
-  margin-bottom: 50px;
+  font-size: 3rem;
+  color: #1e1e2f;
+  margin-bottom: 60px;
+  font-weight: bold;
+  position: relative;
 }
 
 .product-row {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: white;
-  padding: 30px;
-  margin-bottom: 30px;
-  border-radius: 12px;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
-  flex-wrap: wrap;
+  background-color: #ffffff;
+  padding: 40px;
+  margin-bottom: 40px;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  gap: 30px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-row:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.1);
 }
 
 .product-row.reverse {
@@ -47,79 +58,143 @@ body {
 .product-content {
   flex: 1;
   padding: 20px;
+  animation: slideInLeft 0.8s ease forwards;
 }
 
 .product-content h2 {
-  font-size: 1.6rem;
-  margin-bottom: 10px;
-  color: #222;
+  font-size: 2rem;
+  color: #2d3748;
+  margin-bottom: 20px;
 }
 
 .product-content p {
-  font-size: 1rem;
-  margin-bottom: 15px;
-  color: #555;
+  font-size: 1.1rem;
+  color: #4a5568;
+  margin-bottom: 25px;
+  line-height: 1.6;
 }
 
-.product-content .button{
-  background-color: #007bff;
-  color: white;
-  padding: 10px 18px;
-  font-size: 14px;
-  border: none;
-  border-radius: 6px;
+.button-group {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.button,
+.button1 {
+  padding: 12px 24px;
+  font-size: 15px;
+  font-weight: 500;
+  border-radius: 8px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  border: none;
+  transition: all 0.3s ease;
 }
 
-.product-content .button:hover {
+.button {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.button:hover {
   background-color: #0056b3;
+}
+
+.button1 {
+  background-color: #6c757d;
+  color: #fff;
+}
+
+.button1:hover {
+  background-color: #5a6268;
 }
 
 .product-image {
   flex: 1;
   text-align: center;
+  animation: zoomIn 0.8s ease forwards;
 }
 
 .product-image img {
   max-width: 100%;
-  border-radius: 10px;
-  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.4s ease;
 }
 
-.button-group {
-  margin-top: 15px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-.button1{
-  border-style: solid;
-  
-  border:none;
-  background-color: grey;
-  color: white;
-  border-radius: 10px;
+.product-image img:hover {
+  transform: scale(1.03);
 }
 
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
 
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-50px); }
+  to { opacity: 1; transform: translateX(0); }
+}
 
-
-
+@keyframes zoomIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
 
 /* Responsive Design */
-@media (max-width: 768px) {
-  .product-row
-   {
+@media screen and (max-width: 992px) {
+  .product-row {
     flex-direction: column-reverse;
+    padding: 30px;
   }
-  .product-row.reverse{
-    flex-direction: column-reverse;
-  }
-
+  .product-row.reverse {
+  flex-direction: column-reverse;
+}
   .product-content,
   .product-image {
     width: 100%;
-    padding: 10px 0;
+    padding: 15px 0;
+    text-align: center;
+  }
+
+  .product-page h1 {
+    font-size: 2.4rem;
+  }
+
+  .product-content h2 {
+    font-size: 1.5rem;
+  }
+
+  .product-content p {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .background-overlay {
+    padding: 20px;
+  }
+
+  .product-page h1 {
+    font-size: 2rem;
+  }
+
+  .product-row {
+    padding: 20px;
+  }
+
+  .product-content h2 {
+    font-size: 1.3rem;
+  }
+
+  .product-content p {
+    font-size: 0.95rem;
+  }
+
+  .button,
+  .button1 {
+    padding: 10px 18px;
+    font-size: 14px;
   }
 }

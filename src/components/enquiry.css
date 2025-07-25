@@ -22,6 +22,7 @@
   width: 100%;
   padding: 30px;
   border-radius: 15px;
+  margin-top: 3rem;
 }
 
 .right-form h1 {
@@ -80,11 +81,15 @@
   
  
 }
+.right-form{
+  margin-top: 0rem;
+}
 
 /* Left Image */
 .left-image img {
   border-radius: 15px;
   width: 300px;
+  margin-top: 2rem;
 }
 
 }

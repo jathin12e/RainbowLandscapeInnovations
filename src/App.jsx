@@ -21,6 +21,7 @@ import Poolimages from './components/poolimages'
 
 
 
+
 const App = () => {
   return (
     <div>
@@ -40,6 +41,7 @@ const App = () => {
         <Route path='/bioponds' element={<Bioponds />} />
         <Route path='/newinnovation' element={<Newinnovation />} />
         <Route path='/pool/images' element={<Poolimages />} />
+        
       </Routes>
     </div>
   )

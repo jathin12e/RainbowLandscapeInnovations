@@ -8,15 +8,9 @@ import "slick-carousel/slick/slick-theme.css";
 import { Link } from 'react-router-dom';
 import Scroll from './scroll.jsx';
 import Footer from './footer.jsx';
+import Carousels from './carousels.jsx'
 
-const images = [
-  { src: '/images/Rainbow PIX 1.jpg', label: 'Rainbow Landscape Innovations', para: '' },
-  { src: '/images/Screenshot 2025-07-16 115709.png', label: 'Design and Technologies', para: '' },
-  { src: '/images/Rainbow PIX 8.jpg', label: 'Swimming Pools', para: '' },
-  { src: '/images/istockphoto-480651803-612x612.jpg', label: 'Landscape Irrigation', para: '' },
-  { src: '/images/WhatsApp Image 2025-07-20 at 23.26.15_fedf3317.jpg', label: 'Fountain Technology', para: '' },
-  { src: '/WhatsApp Image 2024-09-05 at 13.50.56.jpeg', label: 'Bio Ponds', para: '' }
-];
+
 
 const services = [
   { id: 1, src: "/images/Screenshot 2025-07-19 233358.png", name: "Design and Consultancy", url: "/design" },
@@ -92,39 +86,7 @@ const Home = () => {
       <div>
         <Nav />
       </div>
-      <div className='carousel-section'>
-        
-        <div className='carousel-hero'>
-          <img
-            src={images[index].src}
-            alt='background'
-            className='carousel-bg'
-          />
-          <div className='gradient-overlay'></div>
-          
-          <div className='carousel-nav'>
-            <button className='nav-arrow left' onClick={prevSlide}><FaArrowLeft /></button>
-            <button className='nav-arrow right' onClick={nextSlide}><FaArrowRight /></button>
-          </div>
-          <div className='carousel-caption'>
-            <h1 className='h1-1'>{images[index].label}</h1>
-            <p>{images[index].para}</p>
-          </div>
-        </div>
-
-<div className='carousel-thumbnails-full'>
-  {images.map((img, i) => (
-    <div
-      key={i}
-      className={`thumb ${i === index ? 'active-thumb' : ''}`}
-      onClick={() => setBackgroundImage(i)}
-    >
-      <img src={img.src} alt={`thumb-${i}`} />
-    </div>
-  ))}
-</div>
-
-      </div>
+      <Carousels />
 
       <div className='bg-image'>
         <div ref={ref} className={`scroll-slide-bottom ${isVisible ? 'visible' : ''}`}>

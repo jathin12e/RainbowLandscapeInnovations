@@ -1,98 +1,186 @@
 .product-section {
   font-family: 'Segoe UI', sans-serif;
-  
   background-image: url('/3522195.jpg');
   background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: white;
+  padding: 60px 20px;
+  animation: fadeIn 1s ease-in-out;
+  overflow-x: hidden;
 }
 
 .hero-banner {
- 
-  height: 60vh;
-  color: white;
+  height: 70vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center;
+  position: relative;
+  animation: slideDown 1.2s ease forwards;
 }
 
 .hero-content h1 {
-  font-size: 3.5rem;
-  margin-top: 3rem;
-  font-family: serif;
+  font-size: 3.8rem;
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 10px;
+  transition: transform 0.5s, color 0.5s ease-in-out;
+  animation: typing 2.5s steps(30, end), blink 0.5s step-end infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid #fff;
 }
 
 .hero-content p {
-  font-size: 1.5rem;
-  margin-top: 10px;
-  font-family: serif;
+  font-size: 1.6rem;
+  font-family: 'Merriweather', serif;
+  opacity: 0.9;
+  animation: fadeInUp 1.8s ease-in-out;
+  transition: color 0.5s;
+}
+
+.hero-content p:hover {
+  color: #ffd700;
 }
 
 .product-grid {
   max-width: 1200px;
   margin: auto;
-  padding: 40px 20px;
   display: flex;
   flex-direction: column;
-  gap: 50px;
-  
+  gap: 60px;
+  animation: fadeInUp 1.5s ease-in-out;
 }
 
 .product-row1 {
   display: flex;
-  flex-direction: row;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   flex-wrap: wrap;
-  background-color: rgba(16, 16, 16, 0.3);
-  padding: 10px;
- 
+  background-color: rgba(0, 0, 0, 0.45);
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.product-row1:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.4);
 }
 
 .video-container video {
   width: 100%;
-  max-width: 550px;
-  border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  max-width: 560px;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease;
+}
+
+.video-container video:hover {
+  transform: scale(1.03);
 }
 
 .text-container {
-  max-width: 500px;
-  
+  max-width: 520px;
+  padding: 20px;
 }
 
 .text-container h2 {
   font-size: 3rem;
-  margin-bottom: 10px;
- color: white;
-  font-family: serif;
+  margin-bottom: 15px;
+  font-family: 'Playfair Display', serif;
+  color: #ffffff;
+  animation: slideInLeft 1.2s ease forwards;
+  opacity: 0;
+  transition: color 0.4s ease;
+}
+
+.text-container h2:hover {
+  color: #f0c040;
 }
 
 .text-container p {
-  font-size: 1.5rem;
-  color: white;
-  font-family: serif;
+  font-size: 1.35rem;
+  color: #e0e0e0;
+  line-height: 1.6;
+  font-family: 'Merriweather', serif;
+  animation: slideInRight 1.4s ease forwards;
+  opacity: 0;
+  transition: color 0.4s ease;
+}
+
+.text-container p:hover {
+  color: #ddd;
 }
 
 .reverse {
-  order: 2;
+  flex-direction: row-reverse;
 }
 
-@media (max-width:728px) {
-  .video-container{
-    flex-direction: column-reverse;
+/* Responsive */
+@media (max-width: 768px) {
+  .product-row1 {
+    flex-direction: column;
   }
-  .video-container.reverse{
-    flex-direction: column-reverse;
+
+  .text-container {
+    text-align: center;
+    padding: 10px;
   }
+
+  .text-container h2 {
+    font-size: 2.2rem;
+  }
+
   .text-container p {
-  font-size: 1rem;
-  color: white;
-  font-family: serif;
+    font-size: 1.1rem;
+  }
+
+  .video-container video {
+    margin-top: 20px;
+  }
+
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-content p {
+    font-size: 1.2rem;
+  }
 }
-.text-container h2 {
-  font-size: 2rem;
-  margin-bottom: 10px;
- color: white;
-  font-family: serif;
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
+
+@keyframes slideDown {
+  from { transform: translateY(-40px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  from { transform: translateY(60px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes slideInLeft {
+  from { transform: translateX(-60px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideInRight {
+  from { transform: translateX(60px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink {
+  50% { border-color: transparent }
 }

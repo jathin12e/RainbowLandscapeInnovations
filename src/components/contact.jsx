@@ -84,7 +84,7 @@ const ServiceEnquiry = () => {
         </div>
       </div>
 
-      <div className='locate-position' style={{ textAlign: "center" }}>
+      <div className='locate-position' style={{ textAlign: "center", marginBottom:"2rem" }}>
         <h1 style={{ fontFamily: 'sans-serif' }}>Office Locations</h1>
         <p style={{ color: "grey" }}>
           We have strong presence across India with multiple branches in major cities. Our regional offices<br />

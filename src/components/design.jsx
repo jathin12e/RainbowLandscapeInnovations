@@ -64,7 +64,7 @@ We recommend and incorporate state-of-the-art products sourced from around the w
               
             </div>
             <div className='d-flex flex-row justify-content-center m-2 ml-5'>
-               <button className='btn btn-primary btn-inline-primary' >More images</button>
+               <Link to="/section"><button className='btn btn-primary btn-inline-primary' >More images</button></Link>
             </div>
           </div>
           

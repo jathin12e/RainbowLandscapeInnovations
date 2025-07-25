@@ -38,7 +38,7 @@ body {
 .bg-image2 {
   background-image: url('/images/group-diverse-business-people.jpg');
   background-size: cover;
-  background-attachment: fixed;
+  
   background-position: center;
   color: white;
   display: flex;

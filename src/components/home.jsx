@@ -127,14 +127,12 @@ const Home = () => {
         </div>
       </div>
 
-      <div style={{ margin: "2rem" }}>
-        <video width="100%" autoPlay muted controls loop style={{ borderRadius: "20px" }}>
+      <div>
+        <video width="100%" autoPlay muted controls loop >
           <source src="https://res.cloudinary.com/dfzliqupz/video/upload/v1753163375/Raibow_Landscape_Innovations_-_01_1_1_wkz1ib.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
-        <div className='d-flex flex-row justify-content-center m-2'>
-           
-        </div>
+        
       </div>
 
       <div style={{ width: "60%", margin: "auto", padding: "40px 0" }}>

@@ -8,7 +8,7 @@ const teamMembers = [
     image: "/images/IMG_3998a.jpg",
   },
   {
-    name: "Chandhana",
+    name: "Prabhavathi",
     role: "Director",
     image: "/images/1(1).jpeg",
   },

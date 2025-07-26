@@ -17,6 +17,9 @@ import Bioponds from './components/bioponds'
 import Newinnovation from './components/newInnovation'
 import ScrollToTop from './scrolltop'
 import Poolimages from './components/poolimages'
+import BioImages from './components/biogallery'
+import LandscapeGallery from './components/landscapegallery'
+import FountainGallery from './components/fountaingallery'
 
 
 
@@ -41,7 +44,9 @@ const App = () => {
         <Route path='/bioponds' element={<Bioponds />} />
         <Route path='/newinnovation' element={<Newinnovation />} />
         <Route path='/pool/images' element={<Poolimages />} />
-        
+        <Route path="/bioponds/gallery" element={<BioImages />} />
+        <Route path="/landscape/gallery" element={<LandscapeGallery />} />
+        <Route path="/fountain/gallery" element={<FountainGallery />} />
       </Routes>
     </div>
   )

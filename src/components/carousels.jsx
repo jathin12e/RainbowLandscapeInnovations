@@ -76,6 +76,7 @@ const Carousel = () => {
           </div>
         ))}
       </div>
+      
     </div>
   );
 };

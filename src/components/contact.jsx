@@ -57,29 +57,25 @@ const ServiceEnquiry = () => {
 
   return (
 
-    <div>
-      <Nav />
-    <div style={{
-      backgroundImage: `url('/images/rm222-mind-26.jpg')`,
-      backgroundSize: "110% 100%",
-      backgroundRepeat: "no-repeat"
-    }}>
+        <div>
+          <Nav />
+        <div>
       
 
-      <div style={styles.container}>
+      <div className="enquiry-container">
         <div className="left-image">
           <img src="/images/Screenshot 2025-07-17 172044 (1)-Pica.png" alt="service" />
         </div>
 
-        <div style={styles.contactBox}>
-          <h1 style={styles.heading}>Contact Us</h1>
-          <p style={styles.subText}>Fill in the form below and we’ll get in touch with you shortly</p>
-          <form style={styles.form} onSubmit={handleSubmit}>
-            <input placeholder="Your Name" name="Name" type="text" required style={styles.input} />
-            <input placeholder="Your Email" name="Email" type="text" required style={styles.input} />
-            <input placeholder="Your Phone" name="Phone" type="text" required style={styles.input} />
-            <textarea name="Message" placeholder="Your message or requirements..." required style={styles.textarea}></textarea>
-            <button type="submit" style={styles.button}>{buttonText}</button>
+        <div className="right-form">
+          <h1>Contact Us</h1>
+          <p>Fill in the form below and we’ll get in touch with you shortly</p>
+          <form onSubmit={handleSubmit} className="form">
+            <input placeholder="Your Name" name="Name" type="text" required />
+            <input placeholder="Your Email" name="Email" type="text" required  />
+            <input placeholder="Your Phone" name="Phone" type="text" required />
+            <textarea name="Message" placeholder="Your message or requirements..." required ></textarea>
+            <button type="submit">button</button>
           </form>
         </div>
       </div>
@@ -106,61 +102,6 @@ const ServiceEnquiry = () => {
     </div>
     </div>
   );
-};
-
-const styles = {
-  container: {
-    margin: 'auto',
-    padding: '30px',
-    fontFamily: 'Arial',
-    borderRadius: '10px',
-    display: 'flex',
-    justifyContent: "space-around",
-    alignItems: "center",
-    flexWrap: 'wrap'
-  },
-  heading: {
-    textAlign: 'center',
-    marginBottom: '10px',
-  },
-  subText: {
-    textAlign: 'center',
-    fontSize: '14px',
-    marginBottom: '20px',
-  },
-  form: {
-    display: 'flex',
-    flexDirection: 'column',
-    gap: '15px',
-    width: '300px',
-  },
-  input: {
-    padding: '10px',
-    fontSize: '16px',
-    borderRadius: '5px',
-    border: '1px solid #ccc',
-  },
-  textarea: {
-    height: '100px',
-    padding: '10px',
-    fontSize: '16px',
-    borderRadius: '5px',
-    border: '1px solid #ccc',
-  },
-  button: {
-    backgroundColor: '#007bff',
-    color: '#fff',
-    padding: '12px',
-    border: 'none',
-    borderRadius: '5px',
-    cursor: 'pointer',
-  },
-  contactBox: {
-    marginTop: '30px',
-    padding: '20px',
-    borderRadius: '8px',
-    border: '1px solid #ddd',
-  },
 };
 
 export default ServiceEnquiry;

@@ -91,7 +91,7 @@ const CarouselPage = () => {
 </div>
 <div>
   <video width="100%" autoPlay muted controls loop style={{marginTop:"20px"}}>
-    <source src="/images/WhatsApp Video 2024-03-05 at 18.24.50.mp4" type="video/mp4" />
+    <source src="https://res.cloudinary.com/dfzliqupz/video/upload/v1753508660/VID_20211229_115620_whbh8t.mp4" type="video/mp4" />
       Your browser does not support the video tag.
   </video>
 </div>

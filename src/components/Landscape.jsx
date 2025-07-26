@@ -64,8 +64,8 @@ const CarouselPage = () => {
           className="carousel-image"
         />
         <div className="dark-overlay"></div>
-        <div className="carousel-text-overlay" style={{alignItems:"center"}}>
-          <h1>LandScape Irrigation <br /> Design & Planning</h1>
+        <div className="carousel-text-overlay" >
+          <h1>LandScape Irrigation</h1>
           
         </div>
       </div>

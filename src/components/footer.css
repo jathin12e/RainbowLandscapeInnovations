@@ -21,7 +21,7 @@
 .footer-section {
   flex: 1 1 220px;
   min-width: 200px;
-  margin-left: 40px;
+  
 }
 
 .footer-logo-section {
@@ -136,16 +136,17 @@
 
 /* Responsive */
 @media (max-width: 768px) {
+  
   .footer-container {
     flex-direction: column;
-    align-items: center;
+    
     text-align: center;
   }
 
   .footer-section {
     min-width: auto;
     width: 100%;
-    margin-left: 0px;
+    
   }
 
   .footer-logo-section {

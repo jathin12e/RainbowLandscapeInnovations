@@ -26,7 +26,7 @@ const Footer = () => {
 
         {/* Navigation Links */}
         <div className='position-5'>
-        <div className="footer-section footer-links-section">
+        <div className="footer-section footer-links-section" >
           <h4>Quick Links</h4>
           <ul>
             <li><Link to="/about">About Us</Link></li>

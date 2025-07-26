@@ -35,7 +35,7 @@ const CarouselPage = () => {
           className="carousel-image"
         />
         <div className="dark-overlay"></div>
-        <div className="carousel-text-overlay" style={{alignItems:"center"}}>
+        <div className="carousel-text-overlay">
           <h1>Build Your Dream <br />Swimming Pool</h1>
           
         </div>

@@ -75,7 +75,7 @@ const ServiceEnquiry = () => {
             <input placeholder="Your Email" name="Email" type="text" required  />
             <input placeholder="Your Phone" name="Phone" type="text" required />
             <textarea name="Message" placeholder="Your message or requirements..." required ></textarea>
-            <button type="submit">button</button>
+            <button type="submit">{buttonText}</button>
           </form>
         </div>
       </div>

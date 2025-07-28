@@ -81,6 +81,7 @@ body {
   transition: color 0.3s ease;
   animation: fadeInLeft 1.2s ease forwards;
   opacity: 0;
+  text-align: left;
 }
 .text-position:hover {
   color: #222;
@@ -98,6 +99,7 @@ body {
   flex-wrap: wrap;
   gap: 20px;
 }
+
 
 .locate2 {
   background-color: white;

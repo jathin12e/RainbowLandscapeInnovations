@@ -115,10 +115,11 @@ const ProductShowcase = () => {
       </div>
     
 
-      <Footer />
+      
      
 
     </div>
+    <Footer />
     </div>
   );
 };

@@ -54,7 +54,7 @@ const Footer = () => {
           <h4>Get In Touch</h4>
           <p><Link to="/contact" className="contact-link">Questions or Feedback?</Link></p>
           <p>We'd love to hear from you.</p>
-          <Link to="/" className="btn btn-primary">Back to Home</Link>
+          <Link to="/" className="btn btn-outline-primary" style={{color:"#90caf9"}}>Back to Home</Link>
         </div>
 
       </div>

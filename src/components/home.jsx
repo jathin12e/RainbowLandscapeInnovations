@@ -91,7 +91,7 @@ const Home = () => {
       <div className='bg-image'>
         <div ref={ref} className={`scroll-slide-bottom ${isVisible ? 'visible' : ''}`}>
           <h4 className='h1'>About Us</h4>
-          <p style={{ color: "gray" , fontFamily:"Arial", fontSize: "16px" , margin:"30px"}}>
+          <p style={{ color: "gray" , fontFamily:"Arial", fontSize: "16px" , margin:"30px", textAlign:"left"}}>
             Rainbow Technologies is involved in structural, hydraulic and technical design of 
             swimming Pools, fountain technology, jacuzzi pools, and irrigation systems for 
             the last 20 years. Apart from design we are extensively involved in implementation 

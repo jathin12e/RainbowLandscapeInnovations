@@ -117,4 +117,7 @@
     width: 80px;
     height: 50px;
   }
+  .carousel-nav {
+    display: none;
+  }
 }

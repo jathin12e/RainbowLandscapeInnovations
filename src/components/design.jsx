@@ -3,6 +3,7 @@ import './pool.css';
 import Nav from './nav';
 import Footer from './footer';
 import { Link } from 'react-router-dom';
+import ScrollReveal from './scrollreveal';
 
 const images = [
   '/images/Screenshot 2025-07-19 233358.png',

@@ -9,7 +9,7 @@ export default function ServiceEnquiry() {
     const formEle = document.querySelector("form");
     const formDatab = new FormData(formEle);
     fetch(
-      "https://script.google.com/macros/s/AKfycbxHX-ZubQ1AaX9CQwgxsWjz_ucOcVlc_iEGeUsgj6yN00QVFf0EAZA1OCq7U8hAM3eFKg/exec",
+      "https://script.google.com/macros/s/AKfycbx8qb3YC3cJmoJPBF5NYdrl5FYCTxl3JK8Xq7VAT7KLeXPHJGlXYP7FBPm2KnQZUDNZug/exec",
       {
         method: "POST",
         body: formDatab
@@ -48,7 +48,7 @@ export default function ServiceEnquiry() {
           <select name="Service" required>
             <option value="">Select a Service</option>
             <option value="Swimming Pools">Swimming Pools</option>
-            <option value="Swimming Constructions">Swimming Constructions / Design / Consultation</option>
+            <option value="Swimming Constructions">Swimming Constructions</option>
             <option value="Swimming Equipments">Swimming Equipments</option>
             <option value="Fountain Technology">Fountain Technology</option>
             <option value="Jacuzzi Pools">Bio Ponds</option>

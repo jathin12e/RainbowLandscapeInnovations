@@ -1,0 +1,12 @@
+/* Scroll Reveal (Invisible initially) */
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.6s ease-out, transform 1.6s ease-out;
+}
+
+/* When visible (add with JS) */
+.scroll-reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}

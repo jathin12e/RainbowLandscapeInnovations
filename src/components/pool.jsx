@@ -3,6 +3,8 @@ import './pool.css';
 import Nav from './nav';
 import Footer from './footer';
 import { Link } from 'react-router-dom';
+import ScrollReveal from './scrollreveal';
+
 const images = [
   '/images/Rainbow PIX 8.jpg',
   '/images/Screenshot 2025-07-19 235732.png',
@@ -28,7 +30,7 @@ const CarouselPage = () => {
       </div>
     
       {/* Carousel Section */}
-      <div className="carousel-container">
+      <ScrollReveal delay={300}><div className="carousel-container">
         <img
           src={images[currentIndex]}
           alt={`Slide ${currentIndex + 1}`}
@@ -39,9 +41,9 @@ const CarouselPage = () => {
           <h1>Build Your Dream <br />Swimming Pool</h1>
           
         </div>
-      </div>
+      </div></ScrollReveal>
 
-      {/* About Section */}
+      {/* About Section */}<ScrollReveal delay={300}>
       <div className="about-section">
         <h5 style={{color:"blue"}}>-- We Build The Best Pools</h5>
         <h1 style={{fontFamily:"serif" , fontSize:"4rem"}}>We Are Swimming Pool  <br /> Builders and Swimming <br />Pool Service Experts</h1>
@@ -66,16 +68,13 @@ const CarouselPage = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div></ScrollReveal>
       {/* Our Services Section */}
+<ScrollReveal  delay={300}>
 <div className="services-section">
   <h2 className="section-title">Our Services</h2>
   <div className="services-container">
-    <div className="service-card">
-      
-      <h3>Design & Consultancy</h3>
-      <p>Custom pool designs tailored to your space and vision.</p>
-    </div>
+    
     <div className="service-card">
       <h3>Filtration Systems</h3>
       <p>Installation of efficient and high-performance filtration systems.</p>
@@ -89,14 +88,16 @@ const CarouselPage = () => {
       <p>Reliable routine and emergency pool maintenance services.</p>
     </div>
   </div>
-</div>
+</div></ScrollReveal>
+<ScrollReveal delay={300}>
 <div>
   <video width="100%" autoPlay muted controls loop style={{marginTop:"20px"}}>
     <source src="https://res.cloudinary.com/dfzliqupz/video/upload/v1753162637/Astral_Pool_-_lights_bpevvj.mp4" type="video/mp4" />
       Your browser does not support the video tag.
   </video>
-</div>
+</div></ScrollReveal>
 {/* Pool Models Section */}
+<ScrollReveal delay={300}>
   <div className="models-section">
     <h2 className="section-title">Pool Models</h2>
     <div className="models-container">
@@ -117,15 +118,16 @@ const CarouselPage = () => {
         <h3>Kidney</h3>
       </div>*/}
     </div>
-  </div>
+  </div></ScrollReveal>
+  <ScrollReveal delay={300}>
   <div className='position'>
     <h3 style={{fontFamily:"serif" , fontSize:"2rem" , color:"gray"}}>We are ready to</h3>
     <h1 style={{fontSize:"5rem" ,fontFamily:"serif"}}>SERVE YOU</h1>
     <Link to='/contact' ><button className='btn1'>Contact Us</button></Link>
-  </div>
+  </div></ScrollReveal>
 
 
-      <Footer />
+      <ScrollReveal delay={300}><Footer /></ScrollReveal>
     </div>
   );
 };

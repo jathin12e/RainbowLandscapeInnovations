@@ -37,8 +37,7 @@ const ServiceEnquiry = () => {
     setButtonText("Sending...");
     const formEle = e.target;
     const formData = new FormData(formEle);
-
-    fetch("https://script.google.com/macros/s/AKfycbzfsae7iN_EuEvyj1yHejQN9DyLzxgDMkoizLhCzy2Z5a5T2VRWohaM1GTkpWAbMgd5dg/exec", {
+    fetch("https://script.google.com/macros/s/AKfycbwiteX5wiYm0J8a1r8MbaiJKlxJezpFFpbVoZAL4o5j2st8xYbo1RP-sjmdOh0GfkbGhg/exec", {
       method: "POST",
       body: formData,
     })

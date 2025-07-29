@@ -39,9 +39,9 @@ const about = () => {
         <h1 style={{fontFamily: 'Arial, Helvetica, sans-serif',fontWeight: 'bold' , color:"white"}}>ABOUT US</h1>
       </div>
       <div className='bg-image3'>
-        <h1 style={{marginBottom:"30px" , textShadow: '2px 2px 8px #878282ff', fontFamily:'san-serif'}}>RAINBOW LANDSCAPE INNOVATIONS PVT. LTD</h1>
+        <h1 style={{marginBottom:"30px" , textShadow: '2px 2px 8px #878282ff', fontFamily:'san-serif'}}>RAINBOW LANDSCAPE INNOVATIONS INDIA PVT. LTD</h1>
         <p className='text-position'>Our company is involved in structural, hydraulic, and technical design of Swimming Pools,
-            Fountain Technology,Jacuzzi Pools, and Irrigation Systems for the past 20 years. Apart 
+            Fountain Technology,Jacuzzi Pools, and Irrigation Systems for the past 23 years. Apart 
             from design, we are extensively involved in the implementation of these services. Aesthetically
           and technologically advanced swimming pool designs are our core strength. We undertake projects for 
           both commercial

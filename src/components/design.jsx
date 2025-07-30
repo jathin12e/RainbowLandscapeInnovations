@@ -74,26 +74,26 @@ We recommend and incorporate state-of-the-art products sourced from around the w
       <div className="services-section">
         <h2 className="section-title">Our Services</h2>
         <div className="services-container">
-          <div className="service-card">
+          <Link to="/pool"  style={{color:"black" , textDecoration:"none"}}><div className="service-card">
             <img src="/images/Screenshot 2025-07-20 010936.png" alt="Design Icon" />
             <h3>Swimming Pool</h3>
             <p></p>
-          </div>
-          <div className="service-card">
+          </div></Link>
+          <Link to="/landscape"  style={{color:"black" , textDecoration:"none"}}><div className="service-card">
             <img src="/images/Screenshot 2025-07-20 183946.png" alt="Filtration Icon" />
             <h3>Landscape Irrigation</h3>
             <p></p>
-          </div>
-          <div className="service-card">
+          </div></Link>
+          <Link to="/fountain"  style={{color:"black" , textDecoration:"none"}}><div className="service-card">
             <img src="/images/Screenshot 2025-07-20 235234.png" alt="Lighting Icon" />
             <h3>Fountain Technology</h3>
             <p></p>
-          </div>
-          <div className="service-card">
+          </div></Link>
+          <Link to="/bioponds" style={{color:"black" , textDecoration:"none"}}><div className="service-card">
             <img src="/Screenshot 2025-07-21 010814.png" alt="Maintenance Icon" />
             <h3>Bio Ponds</h3>
             <p></p>
-          </div>
+          </div></Link>
           <div className="service-card">
             <img src="/images/1.jfif" alt="Maintenance Icon" />
             <h3>Maintenance</h3>

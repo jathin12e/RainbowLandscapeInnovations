@@ -46,7 +46,7 @@ const CarouselPage = () => {
       {/* About Section */}<ScrollReveal delay={300}>
       <div className="about-section">
         <h5 style={{color:"blue"}}>-- We Build The Best Pools</h5>
-        <h1 style={{fontFamily:"serif" , fontSize:"4rem"}}>We Are Swimming Pool  <br /> Builders and Swimming <br />Pool Service Experts</h1>
+        <h1 style={{fontFamily:"serif" , fontSize:"4rem"}}>We Are Swimming Pool  <br /> Builders and <br /> Service Experts</h1>
         <div className="about-container">
           <div className="about-image">
             <img src="/images/Screenshot 2025-07-20 000944.png" alt="About Us" />

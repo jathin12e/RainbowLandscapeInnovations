@@ -55,7 +55,7 @@ const CarouselPage = () => {
             
             <p style={{fontFamily:"serif" ,color:"gray" , fontSize:"1.3rem"}}>
               Planning and execution of Swimming Pools, We take up turnkey Swimming solutions, from Shell work to Complete Filtration, Jacuzzi Pools, Heating Systems, Pool Covers, automatic Pool cleaning etc. We also undertake Electro Mechanical works only. Our Swimming Pool scope of work includes, Civil Works, Filtration Works, Electrical Works, Plumbing Works, and Under Water Lighting.
-              <br /><span style={{color:'red'}}>click &nbsp;<a href='/pool/2025 - ROSA GRES UNIQUE POOLS.pdf'>here</a> for more about swimming pools</span>
+              <br /><span style={{color:'red'}}>click &nbsp;<a href='/2025 - ROSA GRES UNIQUE POOLS(2) (2).pdf' target='_blanck'>here</a> for more about swimming pools</span>
             </p>
             <p></p>
             <div className="about-extra-images">

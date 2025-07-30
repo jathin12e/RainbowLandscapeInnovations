@@ -10,7 +10,8 @@ const location = [
   {
     name:"Bangalore", 
     place:"Main office: No. 1, 1st Floor, Deepa Towers,Esther Enclave, Horamavu, Bangalore – 560043",
-    number:"+91 96630 00039"
+    number:"+91 96630 00039",
+    number1:"+91 98450 57127"
   },
   {
     name:"Hyderabad",
@@ -79,6 +80,7 @@ const about = () => {
                     <h4>{u.name}</h4>
                     <p style={{color:"grey"}}>{u.place}</p>
                     <p>{u.number}</p>
+                    <p>{u.number1}</p>
                   </div>
                 )
               })

@@ -127,9 +127,9 @@ const Home = () => {
         </div>
       </div>
 
-      <div>
-        <video width="100%" autoPlay muted controls loop >
-          <source src="https://res.cloudinary.com/dfzliqupz/video/upload/v1753162646/Rainbow_Company_Profile_pgqoa3.mp4" type="video/mp4" />
+      <div style={{margin:"10px"}}>
+        <video width="100%" autoPlay muted controls loop style={{borderRadius:"20px"}}>
+          <source src="/clideo_editor_d2ea86edb09147ea9b6a0d3c1cd277a1.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
         

@@ -37,8 +37,8 @@ const mediaItems = [
   { type: 'video', src: 'https://res.cloudinary.com/dfzliqupz/video/upload/v1753509271/WhatsApp_Video_2023-08-15_at_09.30.23_rjzcwc.mp4' },
   { type: 'video', src: 'https://res.cloudinary.com/dfzliqupz/video/upload/v1753509315/WhatsApp_Video_2025-07-19_at_1.10.11_PM_1_umytjs.mp4' },
   { type: 'video', src: 'https://res.cloudinary.com/dfzliqupz/video/upload/v1753509315/WhatsApp_Video_2025-05-07_at_5.03.34_PM_wqjux4.mp4' },
-  { type: 'video', src: 'https://res.cloudinary.com/dfzliqupz/video/upload/v1753509316/WhatsApp_Video_2025-07-19_at_1.10.11_PM_vcpqbw.mp4' },
-  { type: 'video', src: 'https://res.cloudinary.com/dfzliqupz/video/upload/v1753509317/WhatsApp_Video_2025-05-07_at_11.46.51_AM_ukokoo.mp4' },
+  
+  
   
 ];
 

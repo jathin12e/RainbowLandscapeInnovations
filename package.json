@@ -1,5 +1,6 @@
 {
   "name": "rainbow",
+  "homepage": "https://rainbow.com",
   "private": true,
   "version": "0.0.0",
   "type": "module",

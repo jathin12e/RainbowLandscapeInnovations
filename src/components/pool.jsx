@@ -74,7 +74,10 @@ const CarouselPage = () => {
 <div className="services-section">
   <h2 className="section-title">Our Services</h2>
   <div className="services-container">
-    
+    <div className="service-card">
+      <h3>Construction</h3>
+      <p>We provide construction services for any type of swimming pool as per clients requirements and needs.</p>
+    </div>
     <div className="service-card">
       <h3>Filtration Systems</h3>
       <p>Installation of efficient and high-performance filtration systems.</p>

@@ -94,7 +94,7 @@ const Home = () => {
           <p style={{ color: "gray" , fontFamily:"Arial", fontSize: "16px" , margin:"30px", textAlign:"left"}}>
             Rainbow Technologies is involved in structural, hydraulic and technical design of 
             swimming Pools, fountain technology, jacuzzi pools, and irrigation systems for 
-            the last 20 years. Apart from design we are extensively involved in implementation 
+            the last 23 years. Apart from design we are extensively involved in implementation 
             of the above.
             Aesthetically and Technologically advanced swimming pool Designs are our basic 
             strength. We are involved in commercial and residential pools. Each pool is designed 

@@ -45,7 +45,7 @@ export default function Feedback() {
           </form>
         </div>
         <div className="left-image">
-          <img src="/images/5342014.png" alt="service" />
+          <img src="https://res.cloudinary.com/dfzliqupz/image/upload/v1754120648/5124556_k5oajr.png" alt="service" />
         </div>
       </div>
     </div>

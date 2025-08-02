@@ -34,7 +34,7 @@ export default function ServiceEnquiry() {
       
       <div className="left-image">
         
-        <img src="/images/5124556.png" alt="service" />
+        <img src="https://res.cloudinary.com/dfzliqupz/image/upload/v1754120648/5124556_k5oajr.png" alt="service" />
       </div>
 
       <div className="right-form">
@@ -54,6 +54,7 @@ export default function ServiceEnquiry() {
             <option value="Jacuzzi Pools">Bio Ponds</option>
             <option value="Irrigation Systems">Irrigation Systems</option>
             <option value="Maintenance">Maintenance</option>
+            <option value="Maintenance">Other</option>
           </select>
 
           <textarea name="Message" placeholder="Your message or requirements..." required />

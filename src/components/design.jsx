@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 import ScrollReveal from './scrollreveal';
 
 const images = [
-  '/images/Screenshot 2025-07-19 233358.png',
+  'https://res.cloudinary.com/dfzliqupz/image/upload/v1754117762/Screenshot_2025-07-19_233358_f1tiqx.png',
   '/images/Screenshot 2025-07-20 180308.png',
   '/images/WhatsApp Image 2025-07-20 at 23.26.15_fedf3317.jpg',
 ];
@@ -49,7 +49,7 @@ const CarouselPage = () => {
         </h1>
         <div className="about-container">
           <div className="about-image">
-            <img src="/images/Screenshot 2025-07-20 000944.png" alt="About Us" />
+            <img src="https://res.cloudinary.com/dfzliqupz/image/upload/v1754121263/Screenshot_2025-07-20_000944_nmxvkk.png" alt="About Us" />
             
           </div>
           
@@ -60,7 +60,7 @@ Our approach emphasizes efficient planning and optimal utilization of available 
 We recommend and incorporate state-of-the-art products sourced from around the world to enhance both cost-efficiency and aesthetic appeal, delivering high-quality results from start to finish.
             </p>
             <div className="about-extra-images">
-              <img src="/images/istockphoto-480651803-612x612.jpg" alt="Extra 1" />
+              <img src="https://res.cloudinary.com/dfzliqupz/image/upload/v1754116155/istockphoto-480651803-612x612_tiv0ec.jpg" alt="Extra 1" />
               <img src="/images/Screenshot 2025-07-20 235513.png" alt="Extra 2" />
               
             </div>
@@ -75,7 +75,7 @@ We recommend and incorporate state-of-the-art products sourced from around the w
         <h2 className="section-title">Our Services</h2>
         <div className="services-container">
           <Link to="/pool"  style={{color:"black" , textDecoration:"none"}}><div className="service-card">
-            <img src="/images/Screenshot 2025-07-20 010936.png" alt="Design Icon" />
+            <img src="https://res.cloudinary.com/dfzliqupz/image/upload/v1754121694/Screenshot_2025-07-20_010936_gldlki.png" alt="Design Icon" />
             <h3>Swimming Pool</h3>
             <p></p>
           </div></Link>

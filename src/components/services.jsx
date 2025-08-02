@@ -17,7 +17,7 @@ const products = [
     id: 2,
     name: 'Swimming Pool',
     description: 'Planning and execution of Swimming Pools, We take up turnkey Swimming solutions, from Shell work to Complete Filtration, Jacuzzi Pools, Heating Systems, Pool Covers, automatic Pool cleaning etc. We also undertake Electro Mechanical works only. Our Swimming Pool scope of work includes, Civil Works, Filtration Works, Electrical Works, Plumbing Works, and Under Water Lighting.',
-    image: '/images/Screenshot 2025-07-20 010936.png',
+    image: 'https://res.cloudinary.com/dfzliqupz/image/upload/v1754121694/Screenshot_2025-07-20_010936_gldlki.png',
     path:'/pool'
   },
   {

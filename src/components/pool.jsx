@@ -49,7 +49,7 @@ const CarouselPage = () => {
         <h1 style={{fontFamily:"serif" , fontSize:"4rem"}}>We Are Swimming Pool  <br /> Builders and <br /> Service Experts</h1>
         <div className="about-container">
           <div className="about-image">
-            <img src="/images/Screenshot 2025-07-20 000944.png" alt="About Us" />
+            <img src="https://res.cloudinary.com/dfzliqupz/image/upload/v1754121263/Screenshot_2025-07-20_000944_nmxvkk.png" alt="About Us" />
           </div>
           <div className="about-content">
             
@@ -59,8 +59,8 @@ const CarouselPage = () => {
             </p>
             <p></p>
             <div className="about-extra-images">
-              <img src="/images/Screenshot 2025-07-20 001054.png" alt="Extra 1" />
-              <img src="/images/WhatsApp Image 2024-11-27 at 6.18.38 PM.jpeg" alt="Extra 2" />
+              <img src="https://res.cloudinary.com/dfzliqupz/image/upload/v1754121167/Screenshot_2025-07-20_001054_wdws8z.png" alt="Extra 1" />
+              <img src="https://res.cloudinary.com/dfzliqupz/image/upload/v1754121167/WhatsApp_Image_2024-11-27_at_6.18.38_PM_mvwl3q.jpg" alt="Extra 2" />
             </div>
             <div className='d-flex flex-row justify-content-center m-2 ml-5'>
                <Link to="/pool/images"><button className='btn btn-primary btn-inline-primary' >More images</button></Link>
@@ -109,11 +109,11 @@ const CarouselPage = () => {
         <h3>Rectangle</h3>
       </div>
       <div className="model-card">
-        <img src="/images/Screenshot 2025-07-20 010936.png" alt="Classic Pool" />
+        <img src="https://res.cloudinary.com/dfzliqupz/image/upload/v1754121694/Screenshot_2025-07-20_010936_gldlki.png" alt="Classic Pool" />
         <h3>Classic</h3>
       </div>
       <div className="model-card">
-        <img src="/images/Screenshot 2025-07-19 233358.png" alt="Curved Pool" />
+        <img src="https://res.cloudinary.com/dfzliqupz/image/upload/v1754117762/Screenshot_2025-07-19_233358_f1tiqx.png" alt="Curved Pool" />
         <h3>Curved</h3>
       </div>
       {/*<div className="model-card">

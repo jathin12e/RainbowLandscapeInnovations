@@ -64,7 +64,7 @@ const ServiceEnquiry = () => {
 
       <div className="enquiry-container">
         <div className="left-image">
-          <img src="/images/Screenshot 2025-07-17 172044 (1)-Pica.png" alt="service" />
+          <img src="https://res.cloudinary.com/dfzliqupz/image/upload/v1754120836/Screenshot_2025-07-17_172044_1_-Pica_dfbdjv.png" alt="service" />
         </div>
 
         <div className="right-form">

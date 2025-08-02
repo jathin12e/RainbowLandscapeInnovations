@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 const images = [
   '/images/WhatsApp Image 2025-07-20 at 23.26.15_fedf3317.jpg',
   '/images/Fountain-1.jpg',
-  '/public/Screenshot 2025-07-21 004518.png'
+  'https://res.cloudinary.com/dfzliqupz/image/upload/v1754122094/banner3_r3cnt4.jpg'
 ];
 
 const CarouselPage = () => {

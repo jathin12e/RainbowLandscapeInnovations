@@ -14,7 +14,7 @@ import Carousels from './carousels.jsx'
 
 const services = [
   { id: 1, src: "https://res.cloudinary.com/dfzliqupz/image/upload/v1754117762/Screenshot_2025-07-19_233358_f1tiqx.png", name: "Design and Consultancy", url: "/design" },
-  { id: 2, src: "/images/Screenshot 2025-07-20 000944.png", name: "Swimming Pool", url: "/pool" },
+  { id: 2, src: "https://res.cloudinary.com/dfzliqupz/image/upload/v1754121263/Screenshot_2025-07-20_000944_nmxvkk.png", name: "Swimming Pool", url: "/pool" },
   { id: 3, src: "https://res.cloudinary.com/dfzliqupz/image/upload/v1753532867/istockphoto-480651803-612x612_jb7tk4.jpg", name: "Landscape Irrigation", url: "/landscape" },
   { id: 4, src: "/Screenshot 2025-07-21 004518.png", name: "Fountain Technology", url: "/fountain" },
   { id: 5, src: "/Screenshot 2025-07-21 010559.png", name: "Bio Ponds", url: "/bioponds" }
@@ -104,7 +104,7 @@ const Home = () => {
           
           <Link to="/about"><button className='button-2'>Know More</button></Link>
         </div>
-        <img src="/images/WhatsApp Image 2023-12-06 at 11.20.58(1).jpeg" alt="image" className='img-4' style={{ borderRadius: "20px" }} />
+        <img src="https://res.cloudinary.com/dfzliqupz/image/upload/v1754121813/WhatsApp_Image_2023-12-06_at_11.20.58_1_rgjq6l.jpg" alt="image" className='img-4' style={{ borderRadius: "20px" }} />
       </div>
 
       <div className='bg-image-1'>

@@ -57,8 +57,8 @@ const CarouselPage = () => {
             designing and maintaining Bio Ponds with advanced biological filtration systems. Our solutions are powered by globally sourced, high-quality products that ensure healthy water quality and support the natural balance of aquatic ecosystems.
             </p>
             <div className="about-extra-images">
-              <img src="/images/Bio-Ponds-1.jpg" alt="Extra 1" />
-              <img src="/WhatsApp Image 2024-09-05 at 13.55.02 (1).jpeg" alt="Extra 2" />
+              <img src="https://res.cloudinary.com/dfzliqupz/image/upload/v1754122178/Bio-Ponds-1_o0p47y.jpg" alt="Extra 1" />
+              <img src="https://res.cloudinary.com/dfzliqupz/image/upload/v1754122191/WhatsApp_Image_2024-09-05_at_13.55.02_1_l0thez.jpg" alt="Extra 2" />
             </div>
             <div className='d-flex flex-row justify-content-center m-2 ml-5'>
                <Link to="/bioponds/gallery"><button className='btn btn-primary btn-inline-primary' >More images</button></Link>

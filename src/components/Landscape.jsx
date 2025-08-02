@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 
 const images = [
   '/images/Screenshot 2025-07-20 180308.png',
-  '/images/istockphoto-480651803-612x612.jpg',
+  'https://res.cloudinary.com/dfzliqupz/image/upload/v1753532867/istockphoto-480651803-612x612_jb7tk4.jpg',
   '/images/image.png'
 ];
 

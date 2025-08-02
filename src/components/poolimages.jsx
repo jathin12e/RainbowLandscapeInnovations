@@ -3,7 +3,7 @@ import React from 'react';
 import './images.css';
 
 const mediaItems = [
-  { type: 'image', src: '/pool/Rainbow PIX 8.jpg' },
+  { type: 'image', src: 'https://res.cloudinary.com/dfzliqupz/image/upload/v1754116397/Rainbow_PIX_8_10000_vpxptk.jpg' },
   { type: 'image', src: '/pool/Screenshot 2025-07-25 125250.png' },
   { type: 'image', src: '/pool/Screenshot 2025-07-25 123826.png' },
   { type: 'image', src: '/pool/20210708_060508.jpg' },

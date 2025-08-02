@@ -10,7 +10,7 @@ const products = [
     id: 1,
     name: 'Design and Consultancy',
     description: 'With our vast experience in both design and execution filed, we are equipped to well serve your needs. Our design and planning emphasis on the importance of proper planning of available resources and how they can be optimized by state of art products that we recommend to be used. Our products are imported from across the globe to serve you best and make our implementation effective both cost wise and aesthetically.',
-    image: '/images/Screenshot 2025-07-19 233358.png',
+    image: 'https://res.cloudinary.com/dfzliqupz/image/upload/v1754117762/Screenshot_2025-07-19_233358_f1tiqx.png',
     path:'/design'
   },
   {
@@ -24,7 +24,7 @@ const products = [
     id: 3,
     name: 'Landscape Irrigation',
     description: 'Complete Design and planning for large/small areas of landscape irrigation. Our Landscape Engineering products, include Sprinklers, Micro Drippers, Rotors, sub-soil drainage products, Storm water management, rain water harvesting etc.',
-    image: '/images/istockphoto-480651803-612x612.jpg',
+    image: 'https://res.cloudinary.com/dfzliqupz/image/upload/v1753532867/istockphoto-480651803-612x612_jb7tk4.jpg',
     path:'/landscape'
   },
   {
@@ -48,7 +48,7 @@ const ProductsPage = () => {
     <div>
       <Nav />
     <div style={{
-      backgroundImage: `url('/images/ombre-blue-curve-light-blue-background-vector.jpg')`,
+      backgroundImage: `url('https://res.cloudinary.com/dfzliqupz/image/upload/v1754115758/ombre-blue-curve-light-blue-background-vector_v1r2an.jpg')`,
       backgroundSize: 'cover'
     }}>
       <div className="product-page">

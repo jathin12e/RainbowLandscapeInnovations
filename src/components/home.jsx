@@ -13,9 +13,9 @@ import Carousels from './carousels.jsx'
 
 
 const services = [
-  { id: 1, src: "/images/Screenshot 2025-07-19 233358.png", name: "Design and Consultancy", url: "/design" },
+  { id: 1, src: "https://res.cloudinary.com/dfzliqupz/image/upload/v1754117762/Screenshot_2025-07-19_233358_f1tiqx.png", name: "Design and Consultancy", url: "/design" },
   { id: 2, src: "/images/Screenshot 2025-07-20 000944.png", name: "Swimming Pool", url: "/pool" },
-  { id: 3, src: "/images/istockphoto-480651803-612x612.jpg", name: "Landscape Irrigation", url: "/landscape" },
+  { id: 3, src: "https://res.cloudinary.com/dfzliqupz/image/upload/v1753532867/istockphoto-480651803-612x612_jb7tk4.jpg", name: "Landscape Irrigation", url: "/landscape" },
   { id: 4, src: "/Screenshot 2025-07-21 004518.png", name: "Fountain Technology", url: "/fountain" },
   { id: 5, src: "/Screenshot 2025-07-21 010559.png", name: "Bio Ponds", url: "/bioponds" }
 ];
@@ -129,7 +129,7 @@ const Home = () => {
 
       <div style={{margin:"10px"}}>
         <video width="100%" autoPlay muted controls loop style={{borderRadius:"20px"}}>
-          <source src="/clideo_editor_d2ea86edb09147ea9b6a0d3c1cd277a1.mp4" type="video/mp4" />
+          <source src="/clideo_editor_945e744047ff4a6a87cc78944f8c3f13.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
         

@@ -28,7 +28,7 @@ const mediaItems = [
   { type: 'image', src: '/landscape/05062008119.jpg ' },
   { type: 'image', src: '/landscape/05062008113.jpg' },
   { type: 'image', src: '/landscape/Image(1035).jpg' },
-    
+  
     { type: 'image', src: '/landscape/IMG_0079.JPG' },
     { type: 'image', src: '/landscape/IMG_0632.jpg' },
     { type: 'image', src: '/landscape/IMG_1016.jpg' },
@@ -37,7 +37,7 @@ const mediaItems = [
     { type: 'image', src: '/landscape/DSC03493.JPG ' },
     { type: 'image', src: '/landscape/DSC03453.JPG' },
     { type: 'image', src: '/landscape/DSC03450.JPG' },
-    { type: 'image', src: '/landscape/IMG_1014.jpg' },
+  
 ];
 function Images() {
   return (

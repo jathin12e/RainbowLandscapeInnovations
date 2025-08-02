@@ -17,7 +17,7 @@ body {
   justify-content: center;
   align-items: center;
   gap: 50px;
-  background-image: url('/images/rm222-mind-26.jpg');
+  background-image: url('https://res.cloudinary.com/dfzliqupz/image/upload/v1754115880/rm222-mind-26_i8eqll.jpg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;

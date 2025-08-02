@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 import ScrollReveal from './scrollreveal';
 
 const images = [
-  '/images/Rainbow PIX 8.jpg',
+  'https://res.cloudinary.com/dfzliqupz/image/upload/v1754116397/Rainbow_PIX_8_10000_vpxptk.jpg',
   '/images/Screenshot 2025-07-19 235732.png',
   '/images/Screenshot 2025-07-19 234617.png'
 ];

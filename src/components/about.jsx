@@ -64,7 +64,7 @@ const about = () => {
           with great care to ensure both sustainability and functionality. For all your design, 
           consultancy, and turnkey project needs, we are at your service. We proudly undertake 
           and successfully complete projects across entire South India. 
-          <span style={{color:'red'}}>click &nbsp;<a href='/pool/RAINBOW 2022.pdf' target='_blanck'>here</a> for more about RLI</span>
+           <a href='/pool/RAINBOW 2022.pdf' target='_blanck'>click here</a> for more about RLI
         </p>
         
         <Values />

@@ -37,16 +37,16 @@ const App = () => {
         <Route path='/enquiry' element={<Enquiry />} />
         <Route path='/contact' element={<Contact />} />
         <Route path='/feedback' element={<Feed />}/>
-        <Route path='/pool' element={<Pool />}/>
-        <Route path='/design' element={<Design/>} />
-        <Route path='/landscape' element={<Landscape />} />
-        <Route path='/fountain' element={<Fountain />} />
-        <Route path='/bioponds' element={<Bioponds />} />
+        <Route path='/services/pool' element={<Pool />}/>
+        <Route path='/services/design' element={<Design/>} />
+        <Route path='/services/landscape' element={<Landscape />} />
+        <Route path='/services/fountain' element={<Fountain />} />
+        <Route path='/services/bioponds' element={<Bioponds />} />
         <Route path='/newinnovation' element={<Newinnovation />} />
-        <Route path='/pool/images' element={<Poolimages />} />
-        <Route path="/bioponds/gallery" element={<BioImages />} />
-        <Route path="/landscape/gallery" element={<LandscapeGallery />} />
-        <Route path="/fountain/gallery" element={<FountainGallery />} />
+        <Route path='/services/pool/images' element={<Poolimages />} />
+        <Route path="/services/bioponds/gallery" element={<BioImages />} />
+        <Route path="/services/landscape/gallery" element={<LandscapeGallery />} />
+        <Route path="/services/fountain/gallery" element={<FountainGallery />} />
       </Routes>
     </div>
   )

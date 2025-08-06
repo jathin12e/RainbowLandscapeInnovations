@@ -61,7 +61,7 @@ const CarouselPage = () => {
               <img src="https://res.cloudinary.com/dfzliqupz/image/upload/v1754122191/WhatsApp_Image_2024-09-05_at_13.55.02_1_l0thez.jpg" alt="Extra 2" />
             </div>
             <div className='d-flex flex-row justify-content-center m-2 ml-5'>
-               <Link to="/bioponds/gallery"><button className='btn btn-primary btn-inline-primary' >More images</button></Link>
+               <Link to="/services/bioponds/gallery"><button className='btn btn-primary btn-inline-primary' >More images</button></Link>
             </div>
           </div>
         </div>

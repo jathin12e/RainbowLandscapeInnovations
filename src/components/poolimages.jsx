@@ -1,4 +1,3 @@
-// Images.js
 import React, { useState } from 'react';
 import './images.css';
 
@@ -46,14 +45,9 @@ function Images() {
     <div className="container">
       <h2 className="heading">Gallery</h2>
       <div className="gallery">
-        {mediaItems.map((item, index) => (
+        {mediaItems.map((item, index) =>
           item.type === 'image' ? (
-            <img
-              key={index}
-              src={item.src}
-              alt={`Image ${index + 1}`}
-              onClick={() => openModal(item)}
-            />
+            <img key={index} src={item.src} alt={`Image ${index}`} onClick={() => openModal(item)} />
           ) : (
             <video
               key={index}
@@ -65,7 +59,7 @@ function Images() {
               onClick={() => openModal(item)}
             />
           )
-        ))}
+        )}
       </div>
 
       {modalItem && (

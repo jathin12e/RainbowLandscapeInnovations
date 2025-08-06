@@ -1,5 +1,5 @@
-import React from 'react';
-import './images.css';
+import React, { useState } from 'react';
+import './landscapegallery.css';
 
 const mediaItems = [
   { type: 'image', src: '/landscape/23112007175.jpg' },
@@ -38,25 +38,34 @@ const mediaItems = [
 ];
 
 function Images() {
+  const [selectedImage, setSelectedImage] = useState(null);
+
+  const openImage = (src) => setSelectedImage(src);
+  const closeImage = () => setSelectedImage(null);
+
   return (
     <div className="images-gallery-container">
       <h2 className="gallery-heading">Gallery</h2>
       <div className="media-gallery">
-        {mediaItems.map((item, index) =>
-          item.type === 'image' ? (
-            <div key={index} className="media-card">
-              <img src={item.src} alt={`Image-${index}`} loading="lazy" />
-            </div>
-          ) : (
-            <div key={index} className="media-card">
-              <video controls muted autoPlay loop preload="metadata">
-                <source src={item.src} type="video/mp4" />
-                Your browser does not support the video tag.
-              </video>
-            </div>
-          )
-        )}
+        {mediaItems.map((item, index) => (
+          <div key={index} className="media-card">
+            <img
+              src={item.src}
+              alt={`Image-${index}`}
+              loading="lazy"
+              onClick={() => openImage(item.src)}
+            />
+          </div>
+        ))}
       </div>
+
+      {/* Lightbox Modal */}
+      {selectedImage && (
+        <div className="lightbox" onClick={closeImage}>
+          <span className="close">&times;</span>
+          <img className="lightbox-image" src={selectedImage} alt="Full View" />
+        </div>
+      )}
     </div>
   );
 }

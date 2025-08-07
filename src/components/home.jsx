@@ -129,7 +129,7 @@ const Home = () => {
 
       <div style={{margin:"10px"}}>
         <video width="100%" autoPlay muted controls loop style={{borderRadius:"20px"}}>
-          <source src="/clideo_editor_945e744047ff4a6a87cc78944f8c3f13.mp4" type="video/mp4" />
+          <source src="/InShot_20250807_173709923.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
         

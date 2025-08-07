@@ -1,6 +1,7 @@
 import React from 'react';
 import './footer.css';
 import { Link } from 'react-router-dom';
+import { MdEmail, MdPhone, MdAccessTime, MdLocationOn, MdHelpOutline } from "react-icons/md";
 
 const Footer = () => {
   return (
@@ -15,12 +16,12 @@ const Footer = () => {
             className="footer-logo-img"
           />
           <div className="contact-info">
-            <p>Email: <a href="mailto:ram@rliindia.com">ram@rliindia.com</a></p>
+            <p><MdEmail /> <a href="mailto:ram@rliindia.com">ram@rliindia.com</a></p>
             <p>
-              Phone: <a href="tel:+919845057127">+91 98450 57127</a><br />
+              <MdPhone /> <a href="tel:+919845057127">+91 98450 57127</a><br />
               <a href="tel:+919663000039">+91 96630 00039</a>
             </p>
-            <p>Office Hours: 9:30 AM - 6:30 PM (Mon - Sat)</p>
+            <p><MdAccessTime /> 9:30 AM - 6:30 PM (Mon - Sat)</p>
           </div>
         </div>
 

@@ -30,9 +30,26 @@ const mediaList = [
 
 const Gallery = () => {
   const [modalItem, setModalItem] = useState(null);
+  const [zoom, setZoom] = useState(1);
 
-  const openModal = (item) => setModalItem(item);
+  const openModal = (item) => {
+    setModalItem(item);
+    setZoom(1);
+  };
+
   const closeModal = () => setModalItem(null);
+
+  const handleWheel = (e) => {
+    e.preventDefault();
+    if (e.deltaY < 0) {
+      setZoom((prev) => Math.min(prev + 0.2, 5));
+    } else {
+      setZoom((prev) => Math.max(prev - 0.2, 1));
+    }
+  };
+
+  const zoomIn = () => setZoom((prev) => Math.min(prev + 0.2, 5));
+  const zoomOut = () => setZoom((prev) => Math.max(prev - 0.2, 1));
 
   return (
     <div className="gallery-container">
@@ -65,7 +82,21 @@ const Gallery = () => {
           <div className="modal-content" onClick={(e) => e.stopPropagation()}>
             <span className="close-btn" onClick={closeModal}>&times;</span>
             {modalItem.type === "image" ? (
-              <img src={modalItem.src} alt="Full View" />
+              <>
+                <img
+                  src={modalItem.src}
+                  alt="Full View"
+                  style={{
+                    transform: `scale(${zoom})`,
+                    transition: "transform 0.2s ease"
+                  }}
+                  onWheel={handleWheel}
+                />
+                <div className="zoom-controls">
+                  <button className="zoom-btn" onClick={zoomIn}>+</button>
+                  <button className="zoom-btn" onClick={zoomOut}>−</button>
+                </div>
+              </>
             ) : (
               <video src={modalItem.src} controls autoPlay />
             )}

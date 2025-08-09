@@ -19,9 +19,21 @@ const mediaList = [
 
 const Gallery = () => {
   const [modalItem, setModalItem] = useState(null);
+  const [scale, setScale] = useState(1);
 
-  const openModal = (item) => setModalItem(item);
-  const closeModal = () => setModalItem(null);
+  const openModal = (item) => {
+    setModalItem(item);
+    setScale(1); // Reset zoom when opening
+  };
+
+  const closeModal = () => {
+    setModalItem(null);
+    setScale(1);
+  };
+
+  const zoomIn = () => setScale((prev) => Math.min(prev + 0.2, 3)); // max 3x
+  const zoomOut = () => setScale((prev) => Math.max(prev - 0.2, 0.5)); // min 0.5x
+  const resetZoom = () => setScale(1);
 
   return (
     <div className="gallery-container">
@@ -53,10 +65,28 @@ const Gallery = () => {
         <div className="modal-overlay" onClick={closeModal}>
           <div className="modal-content" onClick={(e) => e.stopPropagation()}>
             <span className="close-btn" onClick={closeModal}>&times;</span>
+
             {modalItem.type === "image" ? (
-              <img src={modalItem.src} alt="Full View" />
+              <div className="zoom-container">
+                <img
+                  src={modalItem.src}
+                  alt="Full View"
+                  style={{
+                    transform: `scale(${scale})`,
+                    transition: 'transform 0.2s ease'
+                  }}
+                />
+              </div>
             ) : (
               <video src={modalItem.src} controls autoPlay />
+            )}
+
+            {modalItem.type === "image" && (
+              <div className="zoom-controls">
+                <button onClick={zoomIn}>+</button>
+                <button onClick={zoomOut}>-</button>
+                <button onClick={resetZoom}>Reset</button>
+              </div>
             )}
           </div>
         </div>

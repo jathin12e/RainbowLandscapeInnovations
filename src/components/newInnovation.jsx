@@ -1,7 +1,7 @@
-import React from 'react';
-import './new1.css';
-import Footer from './footer';
-import Nav from './nav';
+import React, { useRef, useEffect, useState } from "react";
+import "./new1.css";
+import Footer from "./footer";
+import Nav from "./nav";
 
 const products = [
   {
@@ -84,42 +84,108 @@ const products = [
   }
 ];
 
+
+
+
+
 const ProductShowcase = () => {
+  const videoRefs = useRef([]);
+  const [activeIndex, setActiveIndex] = useState(null); // index of currently unmuted video (or null)
+
+  // Keep video refs array the same length as products
+  useEffect(() => {
+    videoRefs.current = videoRefs.current.slice(0, products.length);
+  }, [products.length]);
+
+  // Whenever activeIndex changes, mute/unmute videos accordingly
+  useEffect(() => {
+    videoRefs.current.forEach((vid, idx) => {
+      if (!vid) return;
+      const shouldUnmute = activeIndex === idx;
+      vid.muted = !shouldUnmute;
+      if (shouldUnmute) {
+        // ensure audible and playing (user gesture required for unmuting; click is a gesture)
+        try {
+          vid.volume = 1;
+          vid.play();
+        } catch (e) {
+          /* ignore play errors */
+        }
+      }
+    });
+  }, [activeIndex]);
+
+  // Listen for native changes (volumechange) so if user unmutes via controls we update activeIndex
+  useEffect(() => {
+    const cleanups = [];
+    videoRefs.current.forEach((vid, idx) => {
+      if (!vid) return;
+      const onVolumeChange = () => {
+        // If this video becomes unmuted, mark it active; if muted and it was active, clear active
+        setActiveIndex((prev) => (!vid.muted ? idx : prev === idx ? null : prev));
+      };
+      vid.addEventListener("volumechange", onVolumeChange);
+      cleanups.push(() => vid.removeEventListener("volumechange", onVolumeChange));
+    });
+    return () => cleanups.forEach((fn) => fn());
+  }, []); // run once; refs updated above
+
+  const handleVideoClick = (clickedIndex) => {
+    const vid = videoRefs.current[clickedIndex];
+    if (!vid) return;
+    if (vid.muted) {
+      // unmute clicked and mute others
+      setActiveIndex(clickedIndex);
+    } else {
+      // if clicked when already unmuted -> mute it
+      setActiveIndex(null);
+    }
+    try {
+      vid.play();
+    } catch (e) {}
+  };
+
   return (
     <div>
       <Nav />
-    <div className="product-section">
-     
-      <div className="hero-banner">
-       
-        <div className="hero-content">
-          <h1>SmartTech Innovations</h1>
-          <p>Discover the latest in landscape and pool technology.  From smart automation to <br />advanced fitness systems, our innovations are designed to enhance efficiency, sustainability, and user experience.</p>
+      <div className="product-section">
+        <div className="hero-banner">
+          <div className="hero-content">
+            <h1>SmartTech Innovations</h1>
+            <p>
+              Discover the latest in landscape and pool technology. From smart
+              automation to advanced fitness systems...
+            </p>
+          </div>
+        </div>
+
+        <div className="product-grid">
+          {products.map((product, index) => (
+            <div className="product-row1" key={index}>
+              <div className={`video-container ${index % 2 === 0 ? "" : "reverse"}`}>
+                <video
+                  ref={(el) => (videoRefs.current[index] = el)}
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  preload="auto"
+                  controls
+                  onClick={() => handleVideoClick(index)}
+                >
+                  <source src={product.videoUrl} type="video/mp4" />
+                </video>
+              </div>
+
+              <div className="text-container">
+                <h2>{product.name}</h2>
+                <p>{product.description}</p>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
-
-      <div className="product-grid">
-        {products.map((product, index) => (
-          <div className="product-row1" key={index}>
-            <div className={`video-container ${index % 2 === 0 ? '' : 'reverse'}`}>
-              <video autoPlay muted loop controls>
-                <source src={`${product.videoUrl}`} type="video/mp4" />
-              </video>
-            </div>
-            <div className="text-container">
-              <h2>{product.name}</h2>
-              <p>{product.description}</p>
-            </div>
-          </div>
-        ))}
-      </div>
-    
-
-      
-     
-
-    </div>
-    <Footer />
+      <Footer />
     </div>
   );
 };

@@ -90,8 +90,8 @@ const CarouselPage = () => {
   </div>
 </div>
 <div>
-  <video width="100%" autoPlay muted controls loop style={{marginTop:"20px"}}>
-    <source src="https://res.cloudinary.com/dfzliqupz/video/upload/v1753162480/Dry_Deck_Fountain_rajazt.mp4" type="video/mp4" />
+  <video width="95%" autoPlay muted controls loop style={{borderRadius:"20px" , margin:"30px"}}>
+    <source src="https://res.cloudinary.com/dx70bv381/video/upload/v1754739653/VIDEO-2021-11-25-20-00-11_q12irw.mp4" type="video/mp4" />
       Your browser does not support the video tag.
   </video>
 </div>

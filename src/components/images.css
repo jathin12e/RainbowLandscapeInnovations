@@ -83,6 +83,38 @@
   background-color: rgba(255, 255, 255, 0.3);
 }
 
+.zoom-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: auto;
+  max-height: 80vh;
+}
+
+.zoom-controls {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+}
+
+.zoom-controls button {
+  background: rgba(0,0,0,0.6);
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.zoom-controls button:hover {
+  background: rgba(0,0,0,0.8);
+}
+
+
 @keyframes zoomIn {
   from {
     transform: scale(0.8);

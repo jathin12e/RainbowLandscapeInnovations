@@ -37,11 +37,27 @@ const mediaItems = [
   { type: 'image', src: '/landscape/DSC03450.JPG' },
 ];
 
+
+
+
+
 function Images() {
   const [selectedImage, setSelectedImage] = useState(null);
+  const [scale, setScale] = useState(1);
 
-  const openImage = (src) => setSelectedImage(src);
-  const closeImage = () => setSelectedImage(null);
+  const openImage = (src) => {
+    setSelectedImage(src);
+    setScale(1); // reset zoom when opening a new image
+  };
+
+  const closeImage = () => {
+    setSelectedImage(null);
+    setScale(1);
+  };
+
+  const zoomIn = () => setScale((prev) => Math.min(prev + 0.2, 3)); // limit to 3x
+  const zoomOut = () => setScale((prev) => Math.max(prev - 0.2, 0.5)); // limit to 0.5x
+  const resetZoom = () => setScale(1);
 
   return (
     <div className="images-gallery-container">
@@ -62,8 +78,23 @@ function Images() {
       {/* Lightbox Modal */}
       {selectedImage && (
         <div className="lightbox" onClick={closeImage}>
-          <span className="close">&times;</span>
-          <img className="lightbox-image" src={selectedImage} alt="Full View" />
+          <span className="close" onClick={closeImage}>&times;</span>
+          <div className="zoom-container" onClick={(e) => e.stopPropagation()}>
+            <img
+              className="lightbox-image"
+              src={selectedImage}
+              alt="Full View"
+              style={{
+                transform: `scale(${scale})`,
+                transition: 'transform 0.2s ease'
+              }}
+            />
+          </div>
+          <div className="zoom-controls" onClick={(e) => e.stopPropagation()}>
+            <button onClick={zoomIn}>+</button>
+            <button onClick={zoomOut}>-</button>
+            <button onClick={resetZoom}>Reset</button>
+          </div>
         </div>
       )}
     </div>

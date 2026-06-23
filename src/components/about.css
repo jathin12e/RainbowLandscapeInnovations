@@ -48,7 +48,6 @@ body {
   text-align: center;
   padding-top: 20px;
   animation: fadeIn 1.5s ease-in-out;
- 
 }
 
 .bg-image2 h2,
@@ -67,7 +66,6 @@ body {
   padding: 30px;
   font-family: Arial, Helvetica, sans-serif;
   animation: fadeIn 2s ease-in-out;
-  
 }
 
 /* Text Styling */
@@ -87,6 +85,16 @@ body {
   color: #222;
 }
 
+.text-position a {
+  color: #2c5282;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.text-position a:hover {
+  text-decoration: underline;
+}
+
 /* Location Box Styling */
 .locate-position {
   margin-top: 50px;
@@ -100,10 +108,9 @@ body {
   gap: 20px;
 }
 
-
 .locate2 {
   background-color: white;
-  width: 20%;
+  width: 30%;
   border-radius: 20px;
   box-shadow: 5px 5px 15px rgba(0,0,0,0.1);
   padding: 20px;
@@ -112,6 +119,41 @@ body {
 .locate2:hover {
   transform: translateY(-5px);
   box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.locate2 h4 {
+  font-size: 20px;
+  color: #1a2332;
+  margin-bottom: 10px;
+}
+
+.locate2 p {
+  margin: 6px 0;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* Office Map Container */
+.office-map-container {
+  margin-top: 12px;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #e2e8f0;
+}
+
+.office-map-container .leaflet-container {
+  border-radius: 12px;
+}
+
+/* Map Popup */
+.map-popup {
+  padding: 4px;
+  font-family: 'Arial', sans-serif;
+}
+
+.map-popup strong {
+  color: #2c5282;
+  font-size: 14px;
 }
 
 /* Responsive Layouts */
@@ -132,7 +174,7 @@ body {
   }
 
   .locate2 {
-    width: 40%;
+    width: 45%;
   }
 }
 
@@ -159,12 +201,16 @@ body {
   }
 
   .locate2 {
-    width: 70%;
+    width: 85%;
   }
 
   .img-1 {
     width: 100%;
     height: auto;
+  }
+
+  .office-map-container .leaflet-container {
+    height: 180px !important;
   }
 }
 
@@ -185,8 +231,20 @@ body {
   }
 
   .locate2 {
-    width: 90%;
+    width: 95%;
     box-shadow: 3px 3px 5px rgba(128, 128, 128, 0.4);
+  }
+
+  .locate2 h4 {
+    font-size: 18px;
+  }
+
+  .locate2 p {
+    font-size: 13px;
+  }
+
+  .office-map-container .leaflet-container {
+    height: 150px !important;
   }
 }
 
@@ -204,4 +262,325 @@ body {
 @keyframes fadeInLeft {
   0% { opacity: 0; transform: translateX(-50px); }
   100% { opacity: 1; transform: translateX(0); }
+}
+
+/* Leaflet Override - Fix for default styles */
+.leaflet-control-zoom {
+  border: none !important;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1) !important;
+}
+
+.leaflet-control-zoom a {
+  background: white !important;
+  color: #2c5282 !important;
+  border: 1px solid #e2e8f0 !important;
+}
+
+.leaflet-control-zoom a:hover {
+  background: #f7fafc !important;
+}
+
+.leaflet-popup-content-wrapper {
+  border-radius: 12px !important;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1) !important;
+}
+
+.leaflet-popup-tip {
+  background: white !important;
+}
+
+/* Global Reset & Transitions */
+* {
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Image Styling */
+.img-1 {
+  height: 500px;
+  width: 900px;
+  margin-top: 20px;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.25);
+  transition: transform 0.3s ease-in-out;
+}
+.img-1:hover {
+  transform: scale(1.02);
+}
+
+.img-2 {
+  width: 300px;
+  height: 350px;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+.img-2:hover {
+  transform: scale(1.03);
+}
+
+/* Section with Background Image */
+.bg-image2 {
+  background-image: url('https://res.cloudinary.com/dfzliqupz/image/upload/v1754115582/group-diverse-business-people_fymvkz.jpg');
+  background-size: cover;
+  margin-top: 5rem;
+  background-position: center;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 70vh;
+  text-align: center;
+  padding-top: 20px;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.bg-image2 h2,
+.bg-image2 p {
+  opacity: 0;
+  animation: fadeUp 1.5s ease-in-out forwards;
+  animation-delay: 0.5s;
+}
+
+/* Additional Section */
+.bg-image3 {
+  background-image: url('/images/3433814.jpg');
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  padding: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  animation: fadeIn 2s ease-in-out;
+}
+
+/* Text Styling */
+.text-position {
+  text-indent: 20px;
+  text-align: center;
+  letter-spacing: 1px;
+  font-weight: 400;
+  color: rgb(55, 52, 52);
+  font-size: 1.25rem;
+  transition: color 0.3s ease;
+  animation: fadeInLeft 1.2s ease forwards;
+  opacity: 0;
+  text-align: left;
+}
+.text-position:hover {
+  color: #222;
+}
+
+.text-position a {
+  color: #2c5282;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.text-position a:hover {
+  text-decoration: underline;
+}
+
+/* Location Box Styling */
+.locate-position {
+  margin-top: 50px;
+}
+
+/* Office Map Container */
+.office-map-container {
+  margin: 20px 0 30px 0;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+.office-map-container .leaflet-container {
+  border-radius: 20px;
+}
+
+/* Map Popup */
+.map-popup {
+  padding: 4px;
+  font-family: 'Arial', sans-serif;
+}
+
+.map-popup strong {
+  color: #2c5282;
+  font-size: 14px;
+}
+
+.locate1 {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.locate2 {
+  background-color: white;
+  width: 30%;
+  border-radius: 20px;
+  box-shadow: 5px 5px 15px rgba(0,0,0,0.1);
+  padding: 20px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.locate2:hover {
+  transform: translateY(-5px);
+  box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.locate2 h4 {
+  font-size: 20px;
+  color: #1a2332;
+  margin-bottom: 10px;
+}
+
+.locate2 p {
+  margin: 6px 0;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* Responsive Layouts */
+@media screen and (max-width: 992px) {
+  .bg-image2 {
+    height: 40vh;
+    padding-top: 30px;
+    font-size: 18px;
+  }
+
+  .bg-image3 {
+    padding: 20px;
+  }
+
+  .text-position {
+    font-size: 16px;
+    padding: 10px;
+  }
+
+  .locate2 {
+    width: 45%;
+  }
+
+  .office-map-container .leaflet-container {
+    height: 350px !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .bg-image2 {
+    height: 35vh;
+    font-size: 16px;
+    padding-top: 40px;
+    margin-top: 40px;
+  }
+
+  .bg-image3 {
+    padding: 15px;
+  }
+
+  .text-position {
+    font-size: 15px;
+    text-indent: 10px;
+  }
+
+  .locate1 {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .locate2 {
+    width: 85%;
+  }
+
+  .img-1 {
+    width: 100%;
+    height: auto;
+  }
+
+  .office-map-container .leaflet-container {
+    height: 300px !important;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .bg-image2 {
+    height: 30vh;
+    padding-top: 50px;
+    font-size: 14px;
+  }
+
+  .bg-image3 {
+    padding: 10px;
+  }
+
+  .text-position {
+    font-size: 14px;
+    text-indent: 15px;
+  }
+
+  .locate2 {
+    width: 95%;
+    box-shadow: 3px 3px 5px rgba(128, 128, 128, 0.4);
+  }
+
+  .locate2 h4 {
+    font-size: 18px;
+  }
+
+  .locate2 p {
+    font-size: 13px;
+  }
+
+  .office-map-container .leaflet-container {
+    height: 250px !important;
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeUp {
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInLeft {
+  0% { opacity: 0; transform: translateX(-50px); }
+  100% { opacity: 1; transform: translateX(0); }
+}
+
+/* Leaflet Override - Fix for default styles */
+.leaflet-control-zoom {
+  border: none !important;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1) !important;
+}
+
+.leaflet-control-zoom a {
+  background: white !important;
+  color: #2c5282 !important;
+  border: 1px solid #e2e8f0 !important;
+}
+
+.leaflet-control-zoom a:hover {
+  background: #f7fafc !important;
+}
+
+.leaflet-popup-content-wrapper {
+  border-radius: 12px !important;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1) !important;
+}
+
+.leaflet-popup-tip {
+  background: white !important;
 }

@@ -1,23 +1,52 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import Nav from './nav.jsx';
 import './home.css';
-import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
+import { FaArrowLeft, FaArrowRight, FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { Link } from 'react-router-dom';
 import Scroll from './scroll.jsx';
 import Footer from './footer.jsx';
-import Carousels from './carousels.jsx'
-
-
+import Carousels from './carousels.jsx';
+import Clients from './clients.jsx';
 
 const services = [
-  { id: 1, src: "https://res.cloudinary.com/dfzliqupz/image/upload/v1754117762/Screenshot_2025-07-19_233358_f1tiqx.png", name: "Design and Consultancy", url: "/services/design" },
-  { id: 2, src: "https://res.cloudinary.com/dfzliqupz/image/upload/v1754121263/Screenshot_2025-07-20_000944_nmxvkk.png", name: "Swimming Pool", url: "/services/pool" },
-  { id: 3, src: "https://res.cloudinary.com/dfzliqupz/image/upload/v1753532867/istockphoto-480651803-612x612_jb7tk4.jpg", name: "Landscape Irrigation", url: "/services/landscape" },
-  { id: 4, src: "/Screenshot 2025-07-21 004518.png", name: "Fountain Technology", url: "/services/fountain" },
-  { id: 5, src: "/Screenshot 2025-07-21 010559.png", name: "Bio Ponds", url: "/services/bioponds" }
+  { 
+    id: 1, 
+    src: "https://res.cloudinary.com/dfzliqupz/image/upload/v1754117762/Screenshot_2025-07-19_233358_f1tiqx.png", 
+    name: "Design and Consultancy", 
+    url: "/services/design",
+    description: "Expert architectural and engineering design solutions"
+  },
+  { 
+    id: 2, 
+    src: "https://res.cloudinary.com/dfzliqupz/image/upload/v1754121263/Screenshot_2025-07-20_000944_nmxvkk.png", 
+    name: "Swimming Pool", 
+    url: "/services/pool",
+    description: "Luxury swimming pool design and construction"
+  },
+  { 
+    id: 3, 
+    src: "https://res.cloudinary.com/dfzliqupz/image/upload/v1753532867/istockphoto-480651803-612x612_jb7tk4.jpg", 
+    name: "Landscape Irrigation", 
+    url: "/services/landscape",
+    description: "Smart and sustainable irrigation systems"
+  },
+  { 
+    id: 4, 
+    src: "/Screenshot 2025-07-21 004518.png", 
+    name: "Fountain Technology", 
+    url: "/services/fountain",
+    description: "Innovative water feature and fountain solutions"
+  },
+  { 
+    id: 5, 
+    src: "/Screenshot 2025-07-21 010559.png", 
+    name: "Bio Ponds", 
+    url: "/services/bioponds",
+    description: "Eco-friendly biological pond systems"
+  }
 ];
 
 const reviews = [
@@ -39,119 +68,217 @@ const reviews = [
 ];
 
 const Home = () => {
-  const [index, setIndex] = useState(0);
-  const [fade, setFade] = useState(true);
-  const [disableClick, setDisableClick] = useState(false);
   const [ref, isVisible] = Scroll();
+  const scrollContainerRef = useRef(null);
+  const [canScrollLeft, setCanScrollLeft] = useState(false);
+  const [canScrollRight, setCanScrollRight] = useState(true);
 
-  const updateIndexWithFade = (newIndex) => {
-    if (disableClick) return;
-    setDisableClick(true);
-    setFade(false);
-    setTimeout(() => {
-      setIndex(newIndex);
-      setFade(true);
-      setTimeout(() => setDisableClick(false), 300);
-    }, 300);
+  // Horizontal scroll functionality for services
+  const scrollServices = (direction) => {
+    if (scrollContainerRef.current) {
+      const scrollAmount = 340;
+      const container = scrollContainerRef.current;
+      const newScrollLeft = direction === 'left' 
+        ? container.scrollLeft - scrollAmount 
+        : container.scrollLeft + scrollAmount;
+      
+      container.scrollTo({
+        left: newScrollLeft,
+        behavior: 'smooth'
+      });
+    }
   };
 
-  const prevSlide = () => {
-    const newIndex = index === 0 ? images.length - 1 : index - 1;
-    updateIndexWithFade(newIndex);
+  const checkScrollButtons = () => {
+    if (scrollContainerRef.current) {
+      const { scrollLeft, scrollWidth, clientWidth } = scrollContainerRef.current;
+      setCanScrollLeft(scrollLeft > 10);
+      setCanScrollRight(scrollLeft < scrollWidth - clientWidth - 10);
+    }
   };
 
-  const nextSlide = () => {
-    const newIndex = (index + 1) % images.length;
-    updateIndexWithFade(newIndex);
-  };
+  useEffect(() => {
+    const container = scrollContainerRef.current;
+    if (container) {
+      container.addEventListener('scroll', checkScrollButtons);
+      checkScrollButtons();
+      window.addEventListener('resize', checkScrollButtons);
+      return () => {
+        container.removeEventListener('scroll', checkScrollButtons);
+        window.removeEventListener('resize', checkScrollButtons);
+      };
+    }
+  }, []);
 
-  const setBackgroundImage = (imgIndex) => {
-    updateIndexWithFade(imgIndex);
-  };
-
+  // Settings for testimonials slider - NO ARROWS, NO DOTS
   const settings = {
-    dots: true,
+    dots: false,
+    arrows: false,
     infinite: true,
     speed: 1000,
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 2000
+    autoplaySpeed: 4000,
+    pauseOnHover: true,
+    fade: true,
+    cssEase: "ease-in-out"
   };
 
-  const renderStars = (count) => "★".repeat(count) + "☆".repeat(5 - count);
+  const renderStars = (count) => {
+    let stars = '';
+    for (let i = 0; i < 5; i++) {
+      stars += i < count ? '★' : '☆';
+    }
+    return stars;
+  };
 
   return (
-    <div>
-      <div>
-        <Nav />
-      </div>
+    <div className="home-container">
+      {/* Navigation */}
+      <Nav />
+
+      {/* Hero Carousel */}
       <Carousels />
 
+      {/* Clients Section with Auto-Scrolling Marquee */}
+      
+
+      {/* About Section */}
       <div className='bg-image'>
         <div ref={ref} className={`scroll-slide-bottom ${isVisible ? 'visible' : ''}`}>
-          <h4 className='h1'>About Us</h4>
-          <p style={{ color: "gray" , fontFamily:"Arial", fontSize: "16px" , margin:"30px", textAlign:"left"}}>
+          <div className="about-badge">ABOUT US</div>
+          <h4 className='h1'>Building Excellence</h4>
+          <p style={{ color: "#4a5568", fontFamily: "Arial", fontSize: "16px", margin: "30px", textAlign: "left", lineHeight: "1.8" }}>
             Rainbow Technologies is involved in structural, hydraulic and technical design of 
             swimming Pools, fountain technology, jacuzzi pools, and irrigation systems for 
             the last 23 years. Apart from design we are extensively involved in implementation 
             of the above.
+            <br /><br />
             Aesthetically and Technologically advanced swimming pool Designs are our basic 
             strength. We are involved in commercial and residential pools. Each pool is designed 
             and executed with the requirement of our clients and architects.
-          
           </p>
-          
-          <Link to="/about"><button className='button-2'>Know More</button></Link>
+          <Link to="/about">
+            <button className='button-2'>
+              <span>Know More</span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </button>
+          </Link>
         </div>
-        <img src="https://res.cloudinary.com/dfzliqupz/image/upload/v1754121813/WhatsApp_Image_2023-12-06_at_11.20.58_1_rgjq6l.jpg" alt="image" className='img-4' style={{ borderRadius: "20px" }} />
-      </div>
-
-      <div className='bg-image-1'>
-        <h3 style={{ marginLeft: "30px", fontFamily: "sans-serif" }}>We Offer Best Services </h3>
-        <div className='service-position-1'>
-          {services.map((u) => (
-          
-            <Link to={u.url} key={u.id} style={{ textDecoration: "none" }}>
-              <div className='service-card-2'>
-                <img src={u.src} alt='service' className='service-image' />
-                <h2 className='service-title'>{u.name}</h2>
-              </div>
-            </Link>
-            
-            
-           
-            
-          ))}
-          
+        <div className="about-image-wrapper">
+          <img 
+            src="https://res.cloudinary.com/dfzliqupz/image/upload/v1754121813/WhatsApp_Image_2023-12-06_at_11.20.58_1_rgjq6l.jpg" 
+            alt="Rainbow Technologies" 
+            className='img-4' 
+          />
+          <div className="about-image-badge">
+            <span>23+ Years</span>
+          </div>
         </div>
       </div>
 
-      <div style={{margin:"10px"}}>
-        <video width="100%" autoPlay muted controls loop style={{borderRadius:"20px"}}>
-          <source src="/InShot_20250809_163326059.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-        
+      {/* Services Section with Horizontal Scroll */}
+      <div className='services-horizontal-section'>
+        <div className='services-header'>
+          <div className='services-header-content'>
+            <span className='services-badge'>OUR SERVICES</span>
+            <h2 className='services-title'>We Offer Best <span className='highlight'>Services</span></h2>
+            <p className='services-description'>Comprehensive solutions for all your landscape and water feature needs</p>
+          </div>
+          <div className='services-nav-buttons'>
+            <button 
+              className={`scroll-btn ${!canScrollLeft ? 'disabled' : ''}`}
+              onClick={() => scrollServices('left')}
+              disabled={!canScrollLeft}
+              aria-label="Scroll left"
+            >
+              <FaChevronLeft />
+            </button>
+            <button 
+              className={`scroll-btn ${!canScrollRight ? 'disabled' : ''}`}
+              onClick={() => scrollServices('right')}
+              disabled={!canScrollRight}
+              aria-label="Scroll right"
+            >
+              <FaChevronRight />
+            </button>
+          </div>
+        </div>
+
+        <div className='services-scroll-wrapper'>
+          <div className='services-scroll-container' ref={scrollContainerRef}>
+            {services.map((service, index) => (
+              <Link to={service.url} key={service.id} style={{ textDecoration: 'none' }}>
+                <div className='service-card-horizontal'>
+                  <div className='service-card-image-wrapper'>
+                    <img src={service.src} alt={service.name} className='service-card-image' />
+                    <div className='service-card-overlay'>
+                      <span className='service-number'>0{index + 1}</span>
+                    </div>
+                  </div>
+                  <div className='service-card-content'>
+                    <h3 className='service-card-title'>{service.name}</h3>
+                    <p className='service-card-description'>{service.description}</p>
+                    <div className='service-card-link'>
+                      <span>Learn More</span>
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                      </svg>
+                    </div>
+                  </div>
+                  <div className='service-card-glow'></div>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+
+        {/* Scroll Progress Indicator */}
+        <div className='scroll-progress'>
+          <div className='scroll-progress-bar' style={{ 
+            width: scrollContainerRef.current ? 
+              `${(scrollContainerRef.current.scrollLeft / (scrollContainerRef.current.scrollWidth - scrollContainerRef.current.clientWidth)) * 100}%` 
+              : '0%' 
+          }}></div>
+        </div>
+      </div>
+      <Clients />
+      {/* Video Section */}
+      <div className="video-section">
+        <div className="video-wrapper">
+          <video width="100%" autoPlay muted controls loop>
+            <source src="/InShot_20250809_163326059.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
       </div>
 
-      <div style={{ width: "60%", margin: "auto", padding: "40px 0" }}>
-        <h2 style={{ textAlign: "center", fontFamily: "arial", marginBottom: "20px" }}>What Our Customers Say</h2>
-        <Slider {...settings}>
-          {reviews.map((review, index) => (
-            <div key={index} style={{ textAlign: "center", padding: "20px" }}>
-              <h3>{review.name}</h3>
-              <div style={{ fontSize: "24px", color: "#FFD700" }}>
-                {renderStars(review.rating)}
+      {/* Testimonials Section - NO ARROWS, NO DOTS */}
+      <div className="testimonials-section">
+        <div className="testimonials-header">
+          <span className="testimonials-badge">TESTIMONIALS</span>
+          <h2 className="testimonials-title">What Our <span className="highlight">Customers Say</span></h2>
+          <p className="testimonials-description">Real feedback from our valued clients</p>
+        </div>
+        <div className="testimonials-slider-wrapper">
+          <Slider {...settings}>
+            {reviews.map((review, index) => (
+              <div key={index} className="testimonial-card">
+                <div className="testimonial-rating">
+                  {renderStars(review.rating)}
+                </div>
+                <p className="testimonial-comment">"{review.comment}"</p>
+                <h3 className="testimonial-name">{review.name}</h3>
               </div>
-              <p style={{ fontStyle: "italic", marginTop: "10px" }}>
-                "{review.comment}"
-              </p>
-            </div>
-          ))}
-        </Slider>
+            ))}
+          </Slider>
+        </div>
       </div>
 
+      {/* Footer */}
       <Footer />
     </div>
   );

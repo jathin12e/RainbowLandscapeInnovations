@@ -27,29 +27,31 @@ const Footer = () => {
 
         {/* Navigation Links */}
         <div className='position-5'>
-        <div className="footer-section footer-links-section" >
-          <h4>Quick Links</h4>
-          <ul>
-            <li><Link to="/about">About Us</Link></li>
-            <li><Link to="/newinnovation">New Innovations</Link></li>
-            <li><Link to="/services">Services</Link></li>
-            <li><Link to="/careers">Careers</Link></li>
-            <li><Link to="/contact">Contact</Link></li>
-            <li><Link to="/enquiry">Enquiry</Link></li>
-          </ul>
+          <div className="footer-section footer-links-section">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><Link to="/about">About Us</Link></li>
+              <li><Link to="/newinnovation">New Innovations</Link></li>
+              <li><Link to="/services">Services</Link></li>
+              <li><Link to="/clients">Clients</Link></li> {/* Changed to /clients */}
+              <li><Link to="/careers">Careers</Link></li>
+              <li><Link to="/contact">Contact</Link></li>
+              <li><Link to="/enquiry">Enquiry</Link></li>
+            </ul>
+          </div>
+
+          <div className="footer-section footer-links-section">
+            <h4>Services</h4>
+            <ul>
+              <li><Link to="/services/pool">Swimming Pool</Link></li>
+              <li><Link to="/services/design">Design and Consultancy</Link></li>
+              <li><Link to="/services/landscape">Landscape Irrigation</Link></li>
+              <li><Link to="/services/fountain">Fountain Technologies</Link></li>
+              <li><Link to="/services/bioponds">Bio Ponds</Link></li>
+            </ul>
+          </div>
         </div>
 
-        <div className="footer-section footer-links-section">
-          <h4>Services</h4>
-          <ul>
-            <li><Link to="/services/pool">Swimming Pool</Link></li>
-            <li><Link to="/services/design">Design and Consultancy</Link></li>
-            <li><Link to="/services/landscape">Landscape Irrigation</Link></li>
-            <li><Link to="/services/fountain">Fountain Technologies</Link></li>
-            <li><Link to="/services/bioponds">Bio Ponds</Link></li>
-          </ul>
-        </div>
-        </div>
         {/* Get In Touch */}
         <div className="footer-section footer-contact-section">
           <h4>Get In Touch</h4>

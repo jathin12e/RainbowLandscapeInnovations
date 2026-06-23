@@ -25,6 +25,7 @@ const Nav = () => {
           { path: '/about', label: 'About Us' },
           { path: '/newinnovation', label: 'New Innovation' },
           { path: '/services', label: 'Services' },
+          { path: '/clients', label: 'Clients' }, // Added Clients link
           { path: '/careers', label: 'Careers' },
           { path: '/contact', label: 'Contact Us' },
           { path: '/enquiry', label: 'Service Enquiry' },
